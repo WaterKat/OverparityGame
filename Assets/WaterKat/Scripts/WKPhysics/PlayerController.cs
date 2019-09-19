@@ -83,10 +83,10 @@ namespace WaterKat.VGDA
                 Vector3 collisionvelocity = Vector3.Project(Velocity, closestBound - closestHit.point);
                 if (GroundCollider.OverlapPoint(closestHit.point))
                 {
-                    Debug.Log("INSIDE");
+ //                   Debug.Log("INSIDE");
                     Velocity += (Vector3)closestHit.normal * 10*Time.deltaTime;
                 }
-                Debug.Log(collisionvelocity);
+ //               Debug.Log(collisionvelocity);
                 
                 Velocity += -collisionvelocity;
                 Velocity *= .99f;
