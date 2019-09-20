@@ -5,7 +5,7 @@ namespace WaterKat.WKInput {
     [CreateAssetMenu(fileName = "New InputAction", menuName = "WaterKat/InputManager/InputAction", order = 1)]
     public class InputAction : ScriptableObject
     {
-        public enum
+//        public enum
         // Start is called before the first frame update
     void Start()
         {
