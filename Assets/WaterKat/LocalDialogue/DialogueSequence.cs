@@ -9,7 +9,7 @@ namespace WaterKat.Dialogue
         [System.Serializable]
         public struct DialogueInfo
         {
-            public DialogueCharacter character;
+            public DialogueCharacterInfo character;
 
             public AudioClip audio;
 
