@@ -648,6 +648,7 @@ GameObject:
   - component: {fileID: 593581181}
   - component: {fileID: 593581185}
   - component: {fileID: 593581184}
+  - component: {fileID: 593581186}
   m_Layer: 0
   m_Name: Can
   m_TagString: Untagged
@@ -686,7 +687,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3dc7e6762f87bba41a98487441ff12d6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -706,7 +707,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8eaf5e00b9ae87d47848f02ab48144a8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2a27326667a29334d911d1f660b39fd9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -778,6 +779,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &593581186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593581180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f9b70d206a9a3f4d81b0ba7c08c7fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0.7264151, g: 0.55996513, b: 0.099368125, a: 0.60784316}
 --- !u!1 &602593442
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,6 +1334,7 @@ MonoBehaviour:
   BubblePrefab: {fileID: 3411784252193566601, guid: a5954bbd4b09b1147ab9d211ed2cee64,
     type: 3}
   Offset: {x: 0.5, y: 1}
+  BubbleFadeSpeed: 0.25
 --- !u!1001 &1634543154
 PrefabInstance:
   m_ObjectHideFlags: 0
