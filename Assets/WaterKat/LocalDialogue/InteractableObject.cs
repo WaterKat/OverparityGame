@@ -6,6 +6,36 @@ namespace WaterKat.Dialogue
 {
     public class InteractableObject : MonoBehaviour
     {
+        public SpriteRenderer spriteRenderer;
+        public Material defaultMaterial;
+        public Material outlineMaterial;
+
+        public bool _active = false;
+        public bool Active
+        {
+            get
+            {
+                return _active;
+            }
+            set
+            {
+                _active = value;
+                if (_active)
+                {
+                    spriteRenderer.material = outlineMaterial;
+                }
+                else
+                {
+                    spriteRenderer.material = defaultMaterial;
+                }
+            }
+        }
+
+        private void Start()
+        {
+            Active = false;
+        }
+
         public DialogueSequence dialogueSequence;
 
         public int currentDialogue;

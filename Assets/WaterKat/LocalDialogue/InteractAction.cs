@@ -38,21 +38,28 @@ namespace WaterKat.Dialogue
             throw new NotImplementedException();
         }
 
+        InteractableObject lastinteractableObject;
+
         void Update()
         {
-            bool InteractionInput;
-            InteractionInput = Input.GetKeyDown("e");
+            bool InteractionInput = true; ;
+        //    InteractionInput = Input.GetKeyDown("e");
 
             if (InteractionInput)
             {
                 InteractableObject interactable = FindClosestInteractableObject();
                 if (interactable != null)
                 {
-                    AnimateInteration();
+
+                    interactable.Active = true;
+                    //AnimateInteration();
                 }
-
+                if ((lastinteractableObject != null) && (lastinteractableObject != interactable))
+                {
+                    lastinteractableObject.Active = false;
+                }
+                lastinteractableObject = interactable;
             }
-
         }
 
 
