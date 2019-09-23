@@ -96,7 +96,7 @@ namespace WaterKat.Time
 
             public static TimePair TimePairWithDuration(float desiredDuration)
             {
-                Debug.Log("TimerPair " + UnityEngine.Time.time + " " + (UnityEngine.Time.time + desiredDuration));
+            //    Debug.Log("TimerPair " + UnityEngine.Time.time + " " + (UnityEngine.Time.time + desiredDuration));
                 return new TimePair(UnityEngine.Time.time, UnityEngine.Time.time + desiredDuration);
             }
         }

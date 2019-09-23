@@ -6,17 +6,18 @@ namespace WaterKat.Dialogue
     [CreateAssetMenu(fileName = "New DialogueSequence", menuName = "JordanHall/DialogueSequence", order = 1)]
     public class DialogueSequence : ScriptableObject
     {
-        [System.Serializable]
-        public struct DialogueInfo
-        {
-            public DialogueCharacterInfo character;
-
-            public AudioClip audio;
-
-            public string dialogue;
-            public float duration;
-        }
-
         public DialogueInfo[] Dialogue;
     }
+
+    [System.Serializable]
+    public struct DialogueInfo
+    {
+        public DialogueCharacterInfo character;
+
+        public AudioClip audio;
+
+        public string dialogue;
+        public float duration;
+    }
+
 }

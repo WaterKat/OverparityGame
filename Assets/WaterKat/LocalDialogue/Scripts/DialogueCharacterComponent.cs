@@ -23,7 +23,7 @@ namespace WaterKat.Dialogue {
             Bubble.transform.localPosition = Offset;
             Bubble.GetComponent<SpriteRenderer>().color = CharacterInfo.color;
         }
-        [ContextMenu("FadeInt")]
+        [ContextMenu("FadeIn")]
         public void InitiateFadeIn()
         {
             Bubble.SetActive(true);

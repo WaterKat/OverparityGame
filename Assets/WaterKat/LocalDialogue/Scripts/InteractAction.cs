@@ -51,12 +51,12 @@ namespace WaterKat.Dialogue
                 if (interactable != null)
                 {
 
-                    interactable.Active = true;
+                    interactable.Selected = true;
                     //AnimateInteration();
                 }
                 if ((lastinteractableObject != null) && (lastinteractableObject != interactable))
                 {
-                    lastinteractableObject.Active = false;
+                    lastinteractableObject.Selected = false;
                 }
                 lastinteractableObject = interactable;
             }

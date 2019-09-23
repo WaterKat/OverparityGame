@@ -11,7 +11,7 @@ namespace WaterKat.Dialogue
         public Material outlineMaterial;
 
         public bool _active = false;
-        public bool Active
+        public bool Selected
         {
             get
             {
@@ -33,7 +33,7 @@ namespace WaterKat.Dialogue
 
         private void Start()
         {
-            Active = false;
+            Selected = false;
         }
 
         public DialogueSequence dialogueSequence;
