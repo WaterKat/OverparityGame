@@ -103,5 +103,9 @@ namespace WaterKat.Dialogue
             }
             return null;
         }
+        private void Awake()
+        {
+            DontDestroyOnLoad(this.gameObject);
+        }
     }
 }
