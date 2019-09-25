@@ -81,7 +81,7 @@ namespace WaterKat.UI
         }
 
         [ContextMenu("EarlyAbort")]
-        public void Abort()
+        public void AbortAnimation()
         {
             TimerManager.RemoveLoopedTask(gradientID);
             TimerManager.RemoveTask(fadeOutID);

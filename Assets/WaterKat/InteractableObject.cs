@@ -40,10 +40,15 @@ namespace WaterKat.Dialogue
 
         public int currentDialogue;
 
-        public void Speak()
+        public DialogueInfo currentActiveDialogue
         {
-            Debug.Log(dialogueSequence.Dialogue[currentDialogue]);
-            currentDialogue = (int)Mathf.Repeat(currentDialogue + 1, dialogueSequence.Dialogue.Length - 1);
+            get { return dialogueSequence.Dialogue[currentDialogue]; }
+        }
+
+        public void TickTowardsNextDialogue()
+        {
+      //      Debug.Log(dialogueSequence.Dialogue[currentDialogue]);
+            currentDialogue = (int)Mathf.Repeat(currentDialogue + 1, dialogueSequence.Dialogue.Length);
         }
     }
 }

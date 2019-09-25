@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using WaterKat.Time;
 using WaterKat.UI;
 
@@ -8,24 +6,91 @@ namespace WaterKat.Dialogue
 {
     public class DialogueManager : MonoBehaviour
     {
+        private static DialogueManager _main;
+        public static DialogueManager main
+        {
+            get
+            {
+                if (_main != null)
+                {
+                    return _main;
+                }
+                DialogueManager manager = GameObject.FindObjectOfType<DialogueManager>();
+                if (manager != null)
+                {
+                    _main = manager;
+                    return manager;
+                }
+                else
+                {
+                    DialogueManager newManager = new GameObject().AddComponent<DialogueManager>();
+                    newManager.gameObject.name = "DialogueManager";
+                    DontDestroyOnLoad(newManager.gameObject);
+                    _main = newManager;
+                    return newManager;
+                }
+            }
+        }
+
         public DialogueInfo dialogueInfo;
+
+        public bool Animating
+        {
+            get
+            {
+                bool animating = false;
+                DialogueCharacterComponent _dialogueCharacterBubble = FindCharacterComponent(dialogueInfo.character);
+                if (_dialogueCharacterBubble != null)
+                {
+                   animating = (_dialogueCharacterBubble.Animating || animating);
+                }
+                DialogueCanvasUI _dialogueCanvas = GameObject.FindObjectOfType<DialogueCanvasUI>();
+                if (_dialogueCanvas != null)
+                {
+                    animating = (_dialogueCanvas.Animating || animating);
+                }
+                return animating;
+            }
+        }
 
         [ContextMenu("TestDialogueInfo")]
         void rundialoguetest()
         {
-            StartDialogue(dialogueInfo);
+            RequestDialogue(dialogueInfo);
         }
-        public void StartDialogue(DialogueInfo info)
+
+        public void RequestDialogue(DialogueInfo info)
         {
-            DialogueCharacterComponent _dialogueCharacter= FindCharacterComponent(info.character);
-            if (_dialogueCharacter != null)
+            if (Animating) { return; }
+
+            dialogueInfo = info;
+            DialogueCharacterComponent _dialogueCharacterBubble= FindCharacterComponent(info.character);
+            if (_dialogueCharacterBubble != null)
             {
-                _dialogueCharacter.InitiateFadeIn();
-                TimerManager.AddTask(_dialogueCharacter.InitiateFadeOut, dialogueInfo.duration);
+                _dialogueCharacterBubble.RequestDialogue(info);
             }
-            GameObject.FindObjectOfType<DialogueCanvasUI>().RequestDialogue(info);
+            DialogueCanvasUI _dialogueCanvas = GameObject.FindObjectOfType<DialogueCanvasUI>();
+            if (_dialogueCanvas != null)
+            {
+               _dialogueCanvas.RequestDialogue(info);
+            }
         }
-    
+
+        [ContextMenu("Abort")]
+        public void AbortDialogue()
+        {
+            DialogueCharacterComponent _dialogueCharacterBubble = FindCharacterComponent(dialogueInfo.character);
+            if (_dialogueCharacterBubble != null)
+            {
+                _dialogueCharacterBubble.AbortAnimation();
+            }
+            DialogueCanvasUI _dialogueCanvas = GameObject.FindObjectOfType<DialogueCanvasUI>();
+            if (_dialogueCanvas != null)
+            {
+                _dialogueCanvas.AbortAnimation();
+            }
+        }
+
         DialogueCharacterComponent FindCharacterComponent(DialogueCharacterInfo characterInfo)
         {
             DialogueCharacterComponent[] characterComponents = GameObject.FindObjectsOfType<DialogueCharacterComponent>();
@@ -37,17 +102,6 @@ namespace WaterKat.Dialogue
                 }
             }
             return null;
-        }
-
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
         }
     }
 }
