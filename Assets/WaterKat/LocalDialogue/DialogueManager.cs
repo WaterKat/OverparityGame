@@ -65,7 +65,7 @@ namespace WaterKat.Dialogue
             if (Animating) { return; }
 
             dialogueInfo = info;
-            DialogueCharacterComponent _dialogueCharacterBubble= FindCharacterComponent(info.character);
+            DialogueCharacterComponent _dialogueCharacterBubble = FindCharacterComponent(info.character);
             if (_dialogueCharacterBubble != null)
             {
                 _dialogueCharacterBubble.RequestDialogue(info);
@@ -73,9 +73,12 @@ namespace WaterKat.Dialogue
             DialogueCanvasUI _dialogueCanvas = GameObject.FindObjectOfType<DialogueCanvasUI>();
             if (_dialogueCanvas != null)
             {
-               _dialogueCanvas.RequestDialogue(info);
+                _dialogueCanvas.RequestDialogue(info);
             }
-            AudioManager.PlaySound(info.audio);   
+            if (info.audio.Length > 0)
+            {
+                AudioManager.PlaySound(info.audio);
+            }
         }
 
         [ContextMenu("Abort")]
@@ -91,7 +94,10 @@ namespace WaterKat.Dialogue
             {
                 _dialogueCanvas.AbortAnimation();
             }
-            AudioManager.StopSound(dialogueInfo.audio);
+            if (dialogueInfo.audio.Length > 0)
+            {
+                AudioManager.StopSound(dialogueInfo.audio);
+            }
         }
 
         DialogueCharacterComponent FindCharacterComponent(DialogueCharacterInfo characterInfo)
