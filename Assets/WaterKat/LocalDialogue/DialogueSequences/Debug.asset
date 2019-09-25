@@ -14,22 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dialogue:
   - character: {fileID: 11400000, guid: 2b5891acc8148df47bd05f34732212ce, type: 2}
-    audio: {fileID: 0}
+    audio: VocalA
     dialogue: This is a debug message!
     duration: 3
   - character: {fileID: 11400000, guid: 27fa818dd226e7f439e6ff1537ed7f7d, type: 2}
-    audio: {fileID: 0}
+    audio: VocalB
     dialogue: This is the second debug message
     duration: 3
   - character: {fileID: 11400000, guid: 2b5891acc8148df47bd05f34732212ce, type: 2}
-    audio: {fileID: 0}
+    audio: VocalA
     dialogue: and the third
     duration: 4
   - character: {fileID: 11400000, guid: 27fa818dd226e7f439e6ff1537ed7f7d, type: 2}
-    audio: {fileID: 0}
+    audio: VocalB
     dialogue: and the fourth as well
     duration: 5
   - character: {fileID: 11400000, guid: 27fa818dd226e7f439e6ff1537ed7f7d, type: 2}
-    audio: {fileID: 0}
+    audio: VocalB
     dialogue: fascinating. its the fifth
     duration: 3

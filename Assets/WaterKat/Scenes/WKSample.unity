@@ -3375,7 +3375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueInfo:
     character: {fileID: 11400000, guid: 27fa818dd226e7f439e6ff1537ed7f7d, type: 2}
-    audio: {fileID: 0}
+    audio: 
     dialogue: "I am fast. To give you a reference point I am somewhere between a snake
       and a mongoose\u2026 And a panther."
     duration: 5
@@ -3538,6 +3538,99 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2113139714}
   m_CullTransparentMesh: 0
+--- !u!1001 &110137358566443614
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 45366251347508316, guid: c29d24f067ac95944919e4bd0f7f11f7,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogueAudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 926015527988043173, guid: c29d24f067ac95944919e4bd0f7f11f7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 926015527988043173, guid: c29d24f067ac95944919e4bd0f7f11f7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 926015527988043173, guid: c29d24f067ac95944919e4bd0f7f11f7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 926015527988043173, guid: c29d24f067ac95944919e4bd0f7f11f7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 926015527988043173, guid: c29d24f067ac95944919e4bd0f7f11f7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 926015527988043173, guid: c29d24f067ac95944919e4bd0f7f11f7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 926015527988043173, guid: c29d24f067ac95944919e4bd0f7f11f7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 926015527988043173, guid: c29d24f067ac95944919e4bd0f7f11f7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 926015527988043173, guid: c29d24f067ac95944919e4bd0f7f11f7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 926015527988043173, guid: c29d24f067ac95944919e4bd0f7f11f7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 926015527988043173, guid: c29d24f067ac95944919e4bd0f7f11f7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c29d24f067ac95944919e4bd0f7f11f7, type: 3}
+--- !u!1 &110137358566443615 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 45366251347508316, guid: c29d24f067ac95944919e4bd0f7f11f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 110137358566443614}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &110137358566443616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110137358566443615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a565aaf9cd4874a88ecc54fe9b0017, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingAudioName: 
+  mainAudioPath: Assets/WaterKat/AudioManager/AudioInterfaces
+  AudioClips:
+  - {fileID: 11400000, guid: 5024ca7be4c406949b0ff7f9d68794db, type: 2}
+  - {fileID: 11400000, guid: 3eb28ceeaf2bf1c49b4d055887df3e2c, type: 2}
+  - {fileID: 11400000, guid: 0b42da20c62003345b62cc1e4d6fe2c4, type: 2}
 --- !u!224 &2777156366536132178
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3652,7 +3745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueInfos:
   - character: {fileID: 11400000, guid: 2b5891acc8148df47bd05f34732212ce, type: 2}
-    audio: {fileID: 0}
+    audio: 
     dialogue: Bears. Beets. Battlestar Galactica!
     duration: 5
   FadeInTime: 0.25

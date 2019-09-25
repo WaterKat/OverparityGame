@@ -9,15 +9,5 @@ namespace WaterKat.Dialogue
         public DialogueInfo[] Dialogue;
     }
 
-    [System.Serializable]
-    public struct DialogueInfo
-    {
-        public DialogueCharacterInfo character;
-
-        public AudioClip audio;
-
-        public string dialogue;
-        public float duration;
-    }
 
 }

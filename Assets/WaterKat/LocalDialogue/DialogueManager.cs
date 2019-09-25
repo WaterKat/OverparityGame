@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using WaterKat.Time;
 using WaterKat.UI;
+using WaterKat.Audio;
 
 namespace WaterKat.Dialogue
 {
@@ -74,6 +75,7 @@ namespace WaterKat.Dialogue
             {
                _dialogueCanvas.RequestDialogue(info);
             }
+            AudioManager.PlaySound(info.audio);   
         }
 
         [ContextMenu("Abort")]
@@ -89,6 +91,7 @@ namespace WaterKat.Dialogue
             {
                 _dialogueCanvas.AbortAnimation();
             }
+            AudioManager.StopSound(dialogueInfo.audio);
         }
 
         DialogueCharacterComponent FindCharacterComponent(DialogueCharacterInfo characterInfo)
