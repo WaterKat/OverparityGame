@@ -38,6 +38,9 @@ public class MovementTest : MonoBehaviour
             }
         }
 
+
+          GetComponent<SpriteRenderer>().flipX = (InputX < 0);
+
         
 
         //InputY = Input.GetAxis("0Joystick_LSY");

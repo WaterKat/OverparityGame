@@ -49,7 +49,7 @@ namespace WaterKat.VGDA
         bool CollisionCheck()
         {
             bool Colliding = false;
-            Vector3 deltaMovement = Velocity * Time.fixedDeltaTime;
+            Vector3 deltaMovement = Velocity * UnityEngine.Time.fixedDeltaTime;
 
             RaycastHit2D[] raycastHits = new RaycastHit2D[10];
             int HitCount = GroundCollider.Cast(Velocity.normalized, raycastHits, deltaMovement.magnitude, true);
@@ -83,8 +83,8 @@ namespace WaterKat.VGDA
                 Vector3 collisionvelocity = Vector3.Project(Velocity, closestBound - closestHit.point);
                 if (GroundCollider.OverlapPoint(closestHit.point))
                 {
- //                   Debug.Log("INSIDE");
-                    Velocity += (Vector3)closestHit.normal * 10*Time.deltaTime;
+                    //                   Debug.Log("INSIDE");
+                    Velocity += (Vector3)closestHit.normal * 10* UnityEngine.Time.deltaTime;
                 }
  //               Debug.Log(collisionvelocity);
                 
@@ -95,7 +95,7 @@ namespace WaterKat.VGDA
             }
             else
             {
-              transform.position = transform.position + (Velocity * Time.deltaTime);
+                transform.position = transform.position + (Velocity * UnityEngine.Time.deltaTime);
             }
 
             return Colliding;
@@ -107,7 +107,7 @@ namespace WaterKat.VGDA
             bool colliding = CollisionCheck();
             if (!colliding)
             {
-                Velocity += (GravityDirection.normalized * Gravity) * Time.deltaTime;
+                Velocity += (GravityDirection.normalized * Gravity) * UnityEngine.Time.deltaTime;
             }
 
         }

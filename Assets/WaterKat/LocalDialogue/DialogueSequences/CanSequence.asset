@@ -21,7 +21,7 @@ MonoBehaviour:
     audio: {fileID: 0}
     dialogue: Seriously it's a can
     duration: 3
-  - character: {fileID: 11400000, guid: 2b5891acc8148df47bd05f34732212ce, type: 2}
+  - character: {fileID: 11400000, guid: 27fa818dd226e7f439e6ff1537ed7f7d, type: 2}
     audio: {fileID: 0}
     dialogue: '... it''s a can ...'
     duration: 3

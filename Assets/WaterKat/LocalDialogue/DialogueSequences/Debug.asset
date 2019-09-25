@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e67c8174838ec54ba34b1a2dad64db6, type: 3}
+  m_Name: Debug
+  m_EditorClassIdentifier: 
+  Dialogue:
+  - character: {fileID: 11400000, guid: 2b5891acc8148df47bd05f34732212ce, type: 2}
+    audio: VocalA
+    dialogue: This is a debug message!
+    duration: 3
+  - character: {fileID: 11400000, guid: 27fa818dd226e7f439e6ff1537ed7f7d, type: 2}
+    audio: VocalB
+    dialogue: This is the second debug message
+    duration: 3
+  - character: {fileID: 11400000, guid: 2b5891acc8148df47bd05f34732212ce, type: 2}
+    audio: VocalA
+    dialogue: and the third
+    duration: 4
+  - character: {fileID: 11400000, guid: 27fa818dd226e7f439e6ff1537ed7f7d, type: 2}
+    audio: VocalB
+    dialogue: and the fourth as well
+    duration: 5
+  - character: {fileID: 11400000, guid: 27fa818dd226e7f439e6ff1537ed7f7d, type: 2}
+    audio: VocalB
+    dialogue: fascinating. its the fifth
+    duration: 3

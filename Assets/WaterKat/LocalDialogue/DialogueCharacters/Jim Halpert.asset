@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ff70f94a550d641b3b429e5a490f48, type: 3}
   m_Name: Jim Halpert
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 0, b: 0, a: 1}
+  color: {r: 0, g: 1, b: 0.9226117, a: 1}
