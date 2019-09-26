@@ -57,7 +57,7 @@ namespace WaterKat.Dialogue
             lastinteractableObject = CurrentInteractable;
 
             bool inputBool = Input.GetKeyDown("e");
-            if (inputBool)
+            if ((inputBool)&&(CurrentInteractable!=null))
             {
                 if (!DialogueManager.main.Animating)
                 {

@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace WaterKat.Dialogue
 {
+    [RequireComponent(typeof(Collider2D))]
     public class InteractableObject : MonoBehaviour
     {
         public SpriteRenderer spriteRenderer;

@@ -95,6 +95,7 @@ namespace WaterKat.UI
         [ContextMenu("TestFadeIn")]
         public void TextFadeIn()
         {
+            if (dialogueInfos.Count<1) { return; }
             Animating = true;
             characterName.text = currentDialogue.character.name + ": ";
             characterDialogue.text = currentDialogue.dialogue;
