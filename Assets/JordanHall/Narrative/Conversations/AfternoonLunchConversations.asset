@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e67c8174838ec54ba34b1a2dad64db6, type: 3}
+  m_Name: AfternoonLunchConversations
+  m_EditorClassIdentifier: 
+  Dialogue:
+  - character: {fileID: 11400000, guid: d332ebce44ceb5e4fbc0acd15a1f0030, type: 2}
+    audio: 
+    dialogue: How's your day going?
+    duration: 3
+  - character: {fileID: 11400000, guid: 7378ecfa772b7f5448568124c813c7de, type: 2}
+    audio: 
+    dialogue: Good and you?
+    duration: 3
+  - character: {fileID: 11400000, guid: d332ebce44ceb5e4fbc0acd15a1f0030, type: 2}
+    audio: 
+    dialogue: Good thank you!
+    duration: 3
+  - character: {fileID: 11400000, guid: 623b08a1b5212454491782fa07643ad4, type: 2}
+    audio: 
+    dialogue: Screw you two!
+    duration: 3
