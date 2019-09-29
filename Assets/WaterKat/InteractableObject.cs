@@ -49,7 +49,7 @@ namespace WaterKat.Dialogue
         public void TickTowardsNextDialogue()
         {
       //      Debug.Log(dialogueSequence.Dialogue[currentDialogue]);
-            currentDialogue = (int)Mathf.Repeat(currentDialogue + 1, dialogueSequence.Dialogue.Length);
+            currentDialogue = (int)Mathf.Repeat(currentDialogue + 1, dialogueSequence.Dialogue.Count);
         }
     }
 }

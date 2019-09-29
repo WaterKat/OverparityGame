@@ -97,7 +97,7 @@ namespace WaterKat.UI
         {
             if (dialogueInfos.Count<1) { return; }
             Animating = true;
-            characterName.text = currentDialogue.character.name + ": ";
+            characterName.text = currentDialogue.character.characterName + ": ";
             characterDialogue.text = currentDialogue.dialogue;
             TimerManager.AddLoopedTask(FadeInAnimation, FadeInTime);
             TimerManager.AddLoopedTask(UpdateGradientTimer, currentDialogue.duration,out gradientID);

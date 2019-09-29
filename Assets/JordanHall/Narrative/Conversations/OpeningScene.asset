@@ -15,5 +15,21 @@ MonoBehaviour:
   Dialogue:
   - character: {fileID: 11400000, guid: fbd618b0562a1324090b211a81bed90f, type: 2}
     audio: 
-    dialogue: Attack on the buttom floor
-    duration: 0
+    dialogue: TestA
+    duration: 60
+  - character: {fileID: 11400000, guid: fbd618b0562a1324090b211a81bed90f, type: 2}
+    audio: 
+    dialogue: TestB
+    duration: 60
+  - character: {fileID: 11400000, guid: fbd618b0562a1324090b211a81bed90f, type: 2}
+    audio: 
+    dialogue: TestC
+    duration: 60
+  - character: {fileID: 11400000, guid: fbd618b0562a1324090b211a81bed90f, type: 2}
+    audio: 
+    dialogue: TestD
+    duration: 60
+  - character: {fileID: 11400000, guid: fbd618b0562a1324090b211a81bed90f, type: 2}
+    audio: 
+    dialogue: TestE
+    duration: 60
