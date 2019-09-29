@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -46,7 +46,7 @@ namespace WaterKat.VGDA
         }
         */
 
-        bool CollisionCheck()
+        /*bool CollisionCheck()
         {
             bool Colliding = false;
             Vector3 deltaMovement = Velocity * UnityEngine.Time.fixedDeltaTime;
@@ -112,4 +112,4 @@ namespace WaterKat.VGDA
 
         }
     }
-}
+}*/
