@@ -5,6 +5,16 @@ using System.IO;
 
 public class ConvertTXTtoSequence : MonoBehaviour
 {
-    public Object textFile;
+    public TextAsset textFile;
 
+    [ContextMenu("PrintLines")]
+    void Test()
+    {
+        string[] Lines = textFile.text.Split('\n','\r');
+        foreach (var line in Lines)
+        {
+            Debug.Log(line);
+        }
+    }
+    
 }
