@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 667501676549407032}
   - component: {fileID: 8842569328094986767}
   - component: {fileID: 8393435831417761872}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Puking Man
   m_TagString: Untagged
   m_Icon: {fileID: 0}

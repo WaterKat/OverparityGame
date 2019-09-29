@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7908678748334003838}
   - component: {fileID: 7908678748334003832}
   - component: {fileID: 7908678748334003833}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sonny
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,8 +143,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  maxHealth: 1
+  timeInvincible: 0.5
   bulletPrefab: {fileID: 8296229972751281753, guid: 3b30dd2f7bd0d62428c0a73fc264b6af,
     type: 3}
+  SonnyGun: {fileID: 21300000, guid: 6b437ee78a019ee40a47a697f14daeec, type: 3}
 --- !u!95 &7908678748334003833
 Animator:
   serializedVersion: 3

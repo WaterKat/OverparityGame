@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1226338060026318311}
   - component: {fileID: 830905951996828756}
   - component: {fileID: 3002703689514191359}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Floundling
   m_TagString: Untagged
   m_Icon: {fileID: 0}

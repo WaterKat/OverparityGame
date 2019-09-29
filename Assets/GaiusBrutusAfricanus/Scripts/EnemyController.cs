@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    private Rigidbody2D rigidbody2d;
-    private Vector2 position;
-    private Vector2 right;
+
     public float speed = 3f;
     public int health = 3;
 
-    // Start is called before the first frame update
+    bool dead = false;
+    Rigidbody2D rigidbody2d;
+    Vector2 position;
+    Vector2 right;
+    CapsuleCollider2D collision;
+    Animator animator;
+
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        collision = GetComponent<CapsuleCollider2D>();
+
         right = new Vector2(1, 0);
     }
 
@@ -21,24 +28,36 @@ public class EnemyController : MonoBehaviour
     {
         --health;
         if (health <= 0)
+        {
+            dead = true;
+            animator.SetTrigger("Dead");
+            rigidbody2d.gravityScale = 0;
+            Destroy(collision);
             Destroy(gameObject, despawnTime);
+        }
     }
 
-    void Kill(float despawnTime)
-    {
-        Destroy(gameObject, despawnTime);
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        Vector2 position = rigidbody2d.position;
+        if (!dead)
+        {
+            Vector2 position = rigidbody2d.position;
 
-        if(Time.time % 2 > 0 && Time.time % 2 < 1)
-            position += right * speed * Time.deltaTime;
-        else
-            position += -1 * right * speed * Time.deltaTime;
+            if (Time.time % 2 > 0 && Time.time % 2 < 1)
+                position += right * speed * Time.deltaTime;
+            else
+                position += -1 * right * speed * Time.deltaTime;
 
-        rigidbody2d.MovePosition(position);
+            rigidbody2d.MovePosition(position);
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        SonnyController sonny = other.gameObject.GetComponent<SonnyController>();
+        if(sonny !=null)
+        {
+            sonny.ChangeHealth(-1);
+        }
     }
 }

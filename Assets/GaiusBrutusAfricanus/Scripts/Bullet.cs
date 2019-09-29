@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    Rigidbody2D rigidbody2d;
-    public float despawnTime = .1f;
+    public float despawnTime = 2f;
     public float bulletSpeed = 3000;
 
-    // Start is called before the first frame update
+    Rigidbody2D rigidbody2d;
+
     void Awake()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
@@ -21,20 +21,24 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        //Debug.Log("Projectile Collision with: " + other.gameObject);
-
-        EnemyController e = other.collider.GetComponent<EnemyController>();
-        if (e != null)
+        EnemyController enemy = other.collider.GetComponent<EnemyController>();
+        if (enemy != null)
         {
-            e.Damage(despawnTime);
+            enemy.Damage(despawnTime);
         }
 
-        Destroy(gameObject, despawnTime);
+        /*EnemyControllerCrabtopus cenemy = other.collider.GetComponent<EnemyControllerCrabtopus>();
+        if (cenemy != null)
+        {
+            cenemy.Damage(despawnTime);
+        }*/
+
+        Destroy(gameObject, despawnTime/20);
     }
 
     void Update()
     {
-        if (transform.position.magnitude > 1000f)
+        if (transform.position.magnitude > 300f)
         {
             Destroy(gameObject);
         }

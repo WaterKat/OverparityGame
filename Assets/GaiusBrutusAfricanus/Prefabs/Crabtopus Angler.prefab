@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 4971853196277394124}
   - component: {fileID: 6259935600490703292}
   - component: {fileID: 2361872023653615497}
-  - component: {fileID: 6245260995013431465}
-  m_Layer: 0
+  - component: {fileID: 2370324537336396516}
+  - component: {fileID: 3003871326176071824}
+  m_Layer: 11
   m_Name: Crabtopus Angler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,8 +103,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &6245260995013431465
-BoxCollider2D:
+--- !u!114 &2370324537336396516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3185660472037509509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a0a5f3e19c8fc4d8ea9278e274320c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 6
+  health: 30
+  acidPrefab: {fileID: 7058811266125893546, guid: 7bf080b2d7cfd194fbce471054b43d17,
+    type: 3}
+--- !u!70 &3003871326176071824
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -115,16 +132,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.93, y: 4.84}
-    newSize: {x: 5.93, y: 4.84}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 5.93, y: 4.84}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.00000006283962, y: 0.527137}
+  m_Size: {x: 11.860002, y: 8.170037}
+  m_Direction: 1
