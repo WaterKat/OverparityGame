@@ -11,6 +11,7 @@ public class ConvertTXTtoSequence : MonoBehaviour
     void Test()
     {
         string[] Lines = textFile.text.Split('\n','\r');
+        List<string> TextLines 
         foreach (var line in Lines)
         {
             Debug.Log(line);
