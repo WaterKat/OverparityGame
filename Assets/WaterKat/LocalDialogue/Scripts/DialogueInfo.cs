@@ -13,6 +13,9 @@ namespace WaterKat.Dialogue
         public string audio;
 
         public string dialogue;
-        public float duration;
+
+        [SerializeField]
+        float _duration;
+        public float duration { get { if (_duration != 0) { return _duration; } else { return 3; } } }
     }
 }

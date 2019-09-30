@@ -1,5 +1,5 @@
-MOIRA: whats with the arm. %100
+DEFAULT: This is a test of this dialouge option.
 
-SONNY: I got into a car injury.
+DEFAULT: Dont die
 
-MOIRA: Nice.
+DEFAULT: Try Again.

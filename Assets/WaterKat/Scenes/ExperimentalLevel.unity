@@ -187,10 +187,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 81502786}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f080aa32636197c428fcbb7066586295, type: 3}
+  m_Script: {fileID: 11500000, guid: 7452c34342069f84eb2cc483dffdd6cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testSequence: {fileID: 11400000, guid: 75fc67c1006e37c41b2702f3da685198, type: 2}
+  textFile: {fileID: 4900000, guid: 3cd91718fe811674e807325e2b555502, type: 3}
+  characterInfoPath: Assets/TESTING/Dialogue/CharacterObjects/
+  outputDialogueSequencePath: Assets/TESTING/Dialogue/OutputSequences/
 --- !u!1 &569899620
 GameObject:
   m_ObjectHideFlags: 0
