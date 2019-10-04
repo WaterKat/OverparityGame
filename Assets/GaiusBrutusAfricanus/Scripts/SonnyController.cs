@@ -13,7 +13,6 @@ public class SonnyController : MonoBehaviour
 
     float SPEED;
     int currentHealth;
-    bool sneaking = false;
     bool hasGun = false;
     bool isInvincible;
     float invincibleTimer;
@@ -22,8 +21,8 @@ public class SonnyController : MonoBehaviour
     Rigidbody2D rigidbody2d;
     Animator animator;
     Vector2 lookDirection = new Vector2(1, 0);
-    Vector2 JumpForce = new Vector2(0, 7500);
-    Vector2 SpawnPoint1 = new Vector2(-16.6f, -6.45f);
+    //Vector2 JumpForce = new Vector2(0, 7500);
+    Vector2 SpawnPoint1 = new Vector2(-10f, 20f);
 
     void Start()
     {
@@ -36,25 +35,16 @@ public class SonnyController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.CapsLock))
         {
-            if (!sneaking)
-            {
-                speed = SPEED/2;
-                sneaking = true;
-            }
-            else
-            {
-                speed = SPEED;
-                sneaking = false;
-            }
+            speed = SPEED / 2;
             //animator.SetTrigger("Sneak");
         }
-        else if(Input.GetKeyDown(KeyCode.LeftShift))
+        else if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             speed = 2 * SPEED;
         }
-        else if (Input.GetKeyDown(KeyCode.Space))
+        /*else if (Input.GetKeyDown(KeyCode.Space))
         {
             time2 = Time.time;
             if (time2 - time1 >= 1)
@@ -62,22 +52,24 @@ public class SonnyController : MonoBehaviour
                 rigidbody2d.AddForce(JumpForce);
                 time1 = Time.time;
             }
-        }
-        else if(Input.GetKeyDown(KeyCode.F) && hasGun)
+        }*/
+        else if (Input.GetKeyDown(KeyCode.F) && hasGun)
         {
-            Shoot();
-            speed = 0;
+            time2 = Time.time;
+            if (time2 - time1 >= .5)
+            {
+                Shoot();
+                speed = 0;
+                time1 = Time.time;
+            }     
         }
-
-        if(Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKeyUp(KeyCode.F) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+        else if (Input.GetKeyUp(KeyCode.CapsLock) ||  Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKeyUp(KeyCode.F) 
+            || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.A) 
+            || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) 
+            || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S))
         {
             speed = SPEED;
         }
-
-        /*if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
-        {
-            speed = 0;
-        }*/
 
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
@@ -104,7 +96,6 @@ public class SonnyController : MonoBehaviour
                 isInvincible = false;
         }
     }
-
     public void ChangeHealth(int amount)
     {
         if (amount < 0)
@@ -128,7 +119,7 @@ public class SonnyController : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bulletObject = Instantiate(bulletPrefab, rigidbody2d.position, Quaternion.identity);
+        GameObject bulletObject = Instantiate(bulletPrefab, rigidbody2d.position - new Vector2(10,8), Quaternion.identity);
         Bullet bullet = bulletObject.GetComponent<Bullet>();
         bullet.Shoot(lookDirection, bullet.bulletSpeed);
     }

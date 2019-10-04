@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
 
-    public float speed = 3f;
+    public float speed = 100f;
+    public float patrolTime = 4;
     public int health = 3;
 
     bool dead = false;
@@ -43,7 +44,7 @@ public class EnemyController : MonoBehaviour
         {
             Vector2 position = rigidbody2d.position;
 
-            if (Time.time % 2 > 0 && Time.time % 2 < 1)
+            if (Time.time % patrolTime > 0 && Time.time % patrolTime < 1)
                 position += right * speed * Time.deltaTime;
             else
                 position += -1 * right * speed * Time.deltaTime;

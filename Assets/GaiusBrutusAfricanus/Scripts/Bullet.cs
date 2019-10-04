@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float despawnTime = 2f;
-    public float bulletSpeed = 3000;
+    public float bulletSpeed = 10000;
 
     Rigidbody2D rigidbody2d;
 
@@ -16,6 +16,7 @@ public class Bullet : MonoBehaviour
 
     public void Shoot(Vector2 direction, float force)
     {
+        direction *= new Vector2(1, .20f);
         rigidbody2d.AddForce(direction * force);
     }
 
@@ -33,7 +34,7 @@ public class Bullet : MonoBehaviour
             cenemy.Damage(despawnTime);
         }*/
 
-        Destroy(gameObject, despawnTime/20);
+        Destroy(gameObject, despawnTime/5);
     }
 
     void Update()
