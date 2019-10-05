@@ -7,13 +7,15 @@ using UnityEditor;
 
 public class ConvertTXTtoSequence : MonoBehaviour
 {
-    public TextAsset textFile;
+     public TextAsset PathText;
+
+    public string RootTextAssetFolder = "Assets/TESTING/Dialogue/";
     public string characterInfoPath = "Assets / TESTING / Dialogue / CharacterObjects /";
     public string outputDialogueSequencePath = "Assets / TESTING / Dialogue / OutputSequences /";
 
 
-    [ContextMenu("PrintLines")]
-    List<string> LinesFromTextFile()
+    //[ContextMenu("PrintLines")]
+    List<string> LinesFromTextFile(TextAsset textFile)
     {
         string[] Lines = textFile.text.Split('\n','\r');
         List<string> TextLines = new List<string>();
@@ -37,6 +39,22 @@ public class ConvertTXTtoSequence : MonoBehaviour
         return new string[] { Lines[0], Lines[1].Substring(1) };
     } 
 
+    List<TextAsset> LoadAllTextAssets(string path)
+    {
+        List<TextAsset> textAssets = new List<TextAsset>();
+        string[] guids = AssetDatabase.FindAssets("", new[] { path });
+        foreach (var guid in guids)
+        {
+            string assetPath = AssetDatabase.GUIDToAssetPath(guid);
+            TextAsset textAsset = AssetDatabase.LoadAssetAtPath(assetPath, typeof(TextAsset)) as TextAsset;
+            if (textAsset != null)
+            {
+                textAssets.Add(textAsset);
+            }
+        }
+        return textAssets;
+    }
+
     List<DialogueCharacterInfo> LoadCharacterInfoAssetsFromPath(string path)
     {
         List<DialogueCharacterInfo> characterInfos = new List<DialogueCharacterInfo>();
@@ -44,7 +62,11 @@ public class ConvertTXTtoSequence : MonoBehaviour
         foreach (var guid in guids)
         {
             string assetPath = AssetDatabase.GUIDToAssetPath(guid);
-            characterInfos.Add(AssetDatabase.LoadAssetAtPath(assetPath,typeof(DialogueCharacterInfo)) as DialogueCharacterInfo);
+            DialogueCharacterInfo dialogueCharacterInfo = AssetDatabase.LoadAssetAtPath(assetPath, typeof(DialogueCharacterInfo)) as DialogueCharacterInfo;
+            if (dialogueCharacterInfo != null)
+            {
+                characterInfos.Add(dialogueCharacterInfo);
+            }
         }
         /*
         List<DialogueCharacterInfo> usableAssets = new List<DialogueCharacterInfo>();
@@ -62,12 +84,12 @@ public class ConvertTXTtoSequence : MonoBehaviour
         return characterInfos;
     }
 
-    DialogueSequence SequenceFromLines()
+    DialogueSequence SequenceFromLines(TextAsset textFile)
     {
         DialogueSequence dialogueSequence = ScriptableObject.CreateInstance<DialogueSequence>();
         dialogueSequence.Dialogue = new List<DialogueInfo>();
 
-        List<string> DialogueLines = LinesFromTextFile();
+        List<string> DialogueLines = LinesFromTextFile(textFile);
 
         Dictionary<string, DialogueCharacterInfo> characterDictionary = new Dictionary<string, DialogueCharacterInfo>();
 
@@ -118,11 +140,18 @@ public class ConvertTXTtoSequence : MonoBehaviour
     }
 
     [ContextMenu("Process Text")]
-    void ProcessTextFile()
+    void ProcessTextFiles()
     {
-        DialogueSequence sequence = SequenceFromLines();
-        sequence.name = textFile.name;
-        AssetDatabase.CreateAsset(sequence, outputDialogueSequencePath + sequence.name + ".asset");
+        List<TextAsset> textAssets = LoadAllTextAssets(RootTextAssetFolder);
+        foreach (TextAsset textAsset in textAssets)
+        {
+            Debug.Log(AssetDatabase.GetAssetPath(textAsset));
+
+            DialogueSequence sequence = SequenceFromLines(textAsset);
+            sequence.name = textAsset.name;
+            AssetDatabase.CreateAsset(sequence, outputDialogueSequencePath + sequence.name + ".asset");
+        }
+
     }
     
 }
