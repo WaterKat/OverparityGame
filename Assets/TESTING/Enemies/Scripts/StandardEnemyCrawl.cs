@@ -1,0 +1,59 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(CapsuleCollider2D))]
+
+public class StandardEnemyCrawl : MonoBehaviour
+{
+    public enum EnemyState
+    {
+        passive,
+        
+    }
+    public Vector2 Velocity = new Vector2(3, 1);
+
+    [SerializeField]
+    GameObject activePlayer;
+
+    Rigidbody2D enemyRigidbody;
+    //Collider2D enemyCollider;
+    void Start()
+    {
+        enemyRigidbody = GetComponent<Rigidbody2D>();
+        //enemyCollider = GetComponent<Collider2D>();
+    }
+
+    private bool UpdateTargetPlayer()
+    {
+        activePlayer = GameObject.FindGameObjectWithTag("Player");
+        return activePlayer != null;
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        
+        if (activePlayer != null)
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawSphere(transform.position, 1);
+        }
+    }
+
+    void Update()
+    {
+        Vector2 desiredDirection;
+
+        if (UpdateTargetPlayer())
+        {
+            desiredDirection = (activePlayer.transform.position - transform.position).normalized;
+        }
+        else
+        {
+            desiredDirection = Vector2.zero;
+        }
+
+        enemyRigidbody.velocity = Vector2.Scale(desiredDirection, Velocity);
+    }
+}
