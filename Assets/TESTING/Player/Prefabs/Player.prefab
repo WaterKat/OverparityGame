@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3783843012353065961}
   - component: {fileID: 3783843012353065962}
   - component: {fileID: 3783843012353065960}
+  - component: {fileID: 3734306188519829886}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -68,8 +69,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.5}
-  m_Size: {x: 0.75, y: 0.1}
+  m_Offset: {x: 1.1308658, y: 0.6513046}
+  m_Size: {x: 6.7944794, y: 1.2308725}
   m_Direction: 1
 --- !u!114 &3783843012353065960
 MonoBehaviour:
@@ -83,8 +84,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff62269514b8e14195135b53494cc1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HorizontalSpeed: 4
-  VerticalSpeed: 4
+  HorizontalSpeed: 100
+  VerticalSpeed: 100
+--- !u!114 &3734306188519829886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3783843012353065967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229a113822e85474b95ee2bf4301fc78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 100
+  maxHealth: 5
+  timeInvincible: 0.5
+  bulletPrefab: {fileID: 8296229972751281753, guid: 3b30dd2f7bd0d62428c0a73fc264b6af,
+    type: 3}
+  SonnyGun: {fileID: 21300000, guid: 0bf020f0789ad694b8ac8957d1e2c032, type: 3}
 --- !u!1 &3783843013572154901
 GameObject:
   m_ObjectHideFlags: 0
