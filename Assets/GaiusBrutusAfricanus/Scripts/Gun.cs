@@ -6,11 +6,11 @@ public class Gun : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
-        SonnyController sonny = other.GetComponent<SonnyController>();
+        CharacterMovement2_5b sonny = other.GetComponent<CharacterMovement2_5b>();
         if(sonny != null)
         {
-            Destroy(this.gameObject);
             sonny.getGun();
+            Destroy(this.gameObject);
         }
     }
 }

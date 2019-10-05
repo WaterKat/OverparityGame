@@ -120,14 +120,14 @@ public class CharacterMovement2_5b : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bulletObject = Instantiate(bulletPrefab, rigidbody2d.position - new Vector2(10, 8), Quaternion.identity);
+        GameObject bulletObject = Instantiate(bulletPrefab, rigidbody2d.position + new Vector2(0, 10), Quaternion.identity);
         Bullet bullet = bulletObject.GetComponent<Bullet>();
         bullet.Shoot(lookDirection, bullet.bulletSpeed);
     }
 
     public void getGun()
     {
-        this.GetComponent<SpriteRenderer>().sprite = SonnyGun;
+        //this.GetComponent<SpriteRenderer>().sprite = SonnyGun;
         hasGun = true;
     }
 }
