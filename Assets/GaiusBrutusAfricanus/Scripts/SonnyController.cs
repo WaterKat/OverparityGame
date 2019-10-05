@@ -22,7 +22,7 @@ public class SonnyController : MonoBehaviour
     Animator animator;
     Vector2 lookDirection = new Vector2(1, 0);
     //Vector2 JumpForce = new Vector2(0, 7500);
-    Vector2 SpawnPoint1 = new Vector2(-10f, 20f);
+    Vector2 SpawnPoint1 = new Vector2(-60f, -40f);
 
     void Start()
     {

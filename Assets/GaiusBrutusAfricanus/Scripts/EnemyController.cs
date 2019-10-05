@@ -55,7 +55,7 @@ public class EnemyController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        SonnyController sonny = other.gameObject.GetComponent<SonnyController>();
+        CharacterMovement2_5b sonny = other.gameObject.GetComponent<CharacterMovement2_5b>();
         if(sonny !=null)
         {
             sonny.ChangeHealth(-1);
