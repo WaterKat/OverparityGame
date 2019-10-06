@@ -5,18 +5,17 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    Image healthbar;
-    float maxhealth = 5f;
-    public static float health;
+    Transform bar;
+
     void Start()
     {
-        healthbar = GetComponent<Image>();
-        health = maxhealth;
+        bar = transform.Find("healthbar");
+        //bar.localScale = new Vector2(50f, 50f);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Set(int currentHealth, int maxHealth)
     {
-        healthbar.fillAmount = health / maxhealth;
+        Debug.Log(currentHealth);
+        bar.localScale = new Vector2(((float)currentHealth / maxHealth)*50, 50f);
     }
 }
