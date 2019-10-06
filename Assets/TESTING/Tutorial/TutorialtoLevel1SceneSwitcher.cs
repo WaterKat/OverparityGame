@@ -17,8 +17,10 @@ public class TutorialtoLevel1SceneSwitcher : MonoBehaviour
         SceneManager.LoadScene("menu");
     }
 
-    private void OnTriggerEnter2D()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        GotoLevel1();
+        GameObject thing = other.gameObject;
+        if (thing.tag == "Player")
+            GotoLevel1();
     }
 }

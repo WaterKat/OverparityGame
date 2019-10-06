@@ -8,6 +8,7 @@ public class SonnyController : MonoBehaviour
     public int maxHealth = 1;
     public int health { get { return currentHealth; } }
     public float timeInvincible = .5f;
+    public float bulletSpeed = 50f;
     public GameObject bulletPrefab;
     public Sprite SonnyGun;
 
@@ -53,7 +54,7 @@ public class SonnyController : MonoBehaviour
                 time1 = Time.time;
             }
         }*/
-        else if (Input.GetKeyDown(KeyCode.F) && hasGun)
+        else if (Input.GetKeyDown(KeyCode.F))// && hasGun)
         {
             time2 = Time.time;
             if (time2 - time1 >= .5)
@@ -119,9 +120,9 @@ public class SonnyController : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bulletObject = Instantiate(bulletPrefab, rigidbody2d.position - new Vector2(10,8), Quaternion.identity);
+        GameObject bulletObject = Instantiate(bulletPrefab, rigidbody2d.position - new Vector2(0,0), Quaternion.identity);
         Bullet bullet = bulletObject.GetComponent<Bullet>();
-        bullet.Shoot(lookDirection, bullet.bulletSpeed);
+        bullet.Shoot(lookDirection, bulletSpeed);
     }
 
     public void getGun()
