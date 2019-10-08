@@ -6,17 +6,17 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     Image healthbar;
-    float maxhealth = 5f;
+    float maxHealth = 5f;
     public static float health;
     void Start()
     {
         healthbar = GetComponent<Image>();
-        health = maxhealth;
+        health = maxHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthbar.fillAmount = health / maxhealth;
+        healthbar.fillAmount = health / maxHealth;
     }
 }
