@@ -7,13 +7,15 @@ using UnityEngine;
 
 public class CharacterMovement2_5b : MonoBehaviour
 {
-    public float horizontalSpeed = 7.5f;
+    public float horizontalSpeed = 5f;
     public float verticalSpeed = 5f;
-    public int maxHealth = 1;
+    public int maxHealth = 5;
     public int health { get { return currentHealth; } }
     public float timeInvincible = .5f;
+    public float bulletSpeed = 500f;
     public GameObject bulletPrefab;
     public Sprite SonnyGun;
+    public HealthBar healthBar;
 
     float HORIZ_SPEED;
     float VERT_SPEED;
@@ -105,24 +107,25 @@ public class CharacterMovement2_5b : MonoBehaviour
             invincibleTimer = timeInvincible;
             //animator.SetTrigger("Hit");
         }
+
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         //Debug.Log(currentHealth + "/" + maxHealth);
+
         if (health <= 0)
         {
-            horizontalSpeed = 0;
-            verticalSpeed = 0;
             rigidbody2d.transform.position = spawnPoint1;
-            ChangeHealth(maxHealth);
-            horizontalSpeed = HORIZ_SPEED;
-            verticalSpeed = VERT_SPEED;
+            currentHealth = maxHealth;
+
         }
+
+        healthBar.Set(currentHealth, maxHealth);
     }
 
     void Shoot()
     {
-        GameObject bulletObject = Instantiate(bulletPrefab, rigidbody2d.position + new Vector2(0, 10), Quaternion.identity);
+        GameObject bulletObject = Instantiate(bulletPrefab, rigidbody2d.position + new Vector2(-2f, .25f), Quaternion.identity);
         Bullet bullet = bulletObject.GetComponent<Bullet>();
-        bullet.Shoot(lookDirection, bullet.bulletSpeed);
+        bullet.Shoot(lookDirection, bulletSpeed);
     }
 
     public void getGun()

@@ -12,7 +12,11 @@ public class StandardEnemyCrawl : MonoBehaviour
         passive,
         
     }
+
     public Vector2 Velocity = new Vector2(3, 1);
+
+    [SerializeField]
+    List<Vector2> PatrolPath = new List<Vector2>();
 
     [SerializeField]
     GameObject activePlayer;
