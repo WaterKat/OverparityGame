@@ -9,9 +9,15 @@ public class StandardEnemyCrawl : MonoBehaviour
 {
     public enum EnemyState
     {
-        passive,
-        
+        Idle = 0,
+        PointPatrol = 1,
+        PathPatrol = 2,
+        Aggro = 3,
+        Tired = 4,
+        Stun = 5,
     }
+
+    public EnemyState enemyState;
 
     public Vector2 Velocity = new Vector2(3, 1);
 

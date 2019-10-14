@@ -18,7 +18,9 @@ namespace WaterKat.CustomEditors
                 for (int i = 0; i < list.arraySize; i++)
                 {
                     EditorGUILayout.PropertyField(list.GetArrayElementAtIndex(i));
-//                    Handles.DrawLine(Vector3.zero, list.GetArrayElementAtIndex(i) as Vector3);
+                    EditorGUILayout.Space();
+                    Debug.DrawLine((Vector3)list.GetArrayElementAtIndex((int)Mathf.Repeat(i+1,list.arraySize)).vector2Value, (Vector3)list.GetArrayElementAtIndex(i).vector2Value, new Color(i/(float)list.arraySize,0,0,1), .25f);
+ //                   Handles.DrawLine(Vector3.zero, (Vector3)list.GetArrayElementAtIndex(i).vector2Value);
                 }
                 EditorGUI.indentLevel -= 1;
                 
