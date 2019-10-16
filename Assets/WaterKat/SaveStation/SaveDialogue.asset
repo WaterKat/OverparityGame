@@ -9,7 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13ff70f94a550d641b3b429e5a490f48, type: 3}
-  m_Name: Sonny
+  m_Script: {fileID: 11500000, guid: 7e67c8174838ec54ba34b1a2dad64db6, type: 3}
+  m_Name: SaveDialogue
   m_EditorClassIdentifier: 
-  color: {r: 0.3508811, g: 0.46036354, b: 0.7830189, a: 1}
+  Dialogue:
+  - character: {fileID: 11400000, guid: 84cb4055f45771541a57d38fe19ec79c, type: 2}
+    audio: 
+    dialogue: Man I really needed to take a shit!
+    _duration: 3

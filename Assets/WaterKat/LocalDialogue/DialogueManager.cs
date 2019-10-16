@@ -114,7 +114,14 @@ namespace WaterKat.Dialogue
         }
         private void Awake()
         {
-            DontDestroyOnLoad(this.gameObject);
-        }
+            if (transform.parent == null)
+            {
+                DontDestroyOnLoad(this.gameObject);
+            }
+            else
+            {
+                DontDestroyOnLoad(transform.parent.gameObject);
+            }
+            }
     }
 }

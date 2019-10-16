@@ -11,10 +11,10 @@ namespace WaterKat.Audio
         AudioSource audioSource;
 
         [SerializeField]
-        AudioMixerGroup audioMixerGroup;
+        AudioMixerGroup audioMixerGroup = null;
 
         [SerializeField]
-        AudioClip audioClip;
+        AudioClip audioClip = null;
         public AudioClip AudioClip { get { return AudioClip; } set { } }
 
         [Space(30)]

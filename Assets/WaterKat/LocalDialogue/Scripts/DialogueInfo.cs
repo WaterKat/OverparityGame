@@ -6,7 +6,7 @@ using UnityEngine;
 namespace WaterKat.Dialogue
 {
     [System.Serializable]
-    public struct DialogueInfo
+    public class DialogueInfo
     {
         public DialogueCharacterInfo character;
 
@@ -17,5 +17,13 @@ namespace WaterKat.Dialogue
         [SerializeField]
         float _duration;
         public float duration { get { if (_duration != 0) { return _duration; } else { return 3; } } }
+
+        public DialogueInfo()
+        {
+            character = null;
+            audio = "";
+            dialogue = "Placeholder Dialogue!";
+            _duration = 3;
+        }
     }
 }

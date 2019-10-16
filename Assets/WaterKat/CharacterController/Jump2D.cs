@@ -11,7 +11,7 @@ public class Jump2D : MonoBehaviour
 
     private float Gravity;
 
-    Rigidbody2D rigidbody;
+    Rigidbody2D playerRigidbody;
 
     void SetupGravityScale()
     {
@@ -20,19 +20,19 @@ public class Jump2D : MonoBehaviour
 
     void Jump()
     {
-        rigidbody.velocity = MathW.SetVector(rigidbody.velocity, 1, JumpHeight / JumpTime);
+        playerRigidbody.velocity = MathW.SetVector(playerRigidbody.velocity, 1, JumpHeight / JumpTime);
     }
 
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
+        playerRigidbody = GetComponent<Rigidbody2D>();
         SetupGravityScale();
     }
 
     // Update is called once per frame
     void Update()
     {
-        rigidbody.velocity = MathW.SetVector(rigidbody.velocity, 1, rigidbody.velocity.y + (Time.deltaTime * Gravity * -1f));
+        playerRigidbody.velocity = MathW.SetVector(playerRigidbody.velocity, 1, playerRigidbody.velocity.y + (Time.deltaTime * Gravity * -1f));
         if (Input.GetKeyDown("space"))
         {
             Jump();

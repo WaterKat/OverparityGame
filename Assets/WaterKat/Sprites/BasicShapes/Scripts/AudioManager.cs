@@ -60,7 +60,7 @@ namespace WaterKat.Audio
         }
 
         [SerializeField]
-        string StartingAudioName;
+        string StartingAudioName = "";
         [SerializeField]
         private string mainAudioPath = "Assets/WaterKat/AudioManager/AudioInterfaces";
         [Space(30)]
