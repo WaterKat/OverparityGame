@@ -31,6 +31,19 @@ AnimationClip:
     path: 
     classID: 212
     script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: 46b244394e7354546a87a4de22479e4b, type: 3}
+    - time: 0.25
+      value: {fileID: 21300000, guid: a6e09465f8fca344fbb1449e3fd05aae, type: 3}
+    - time: 0.5
+      value: {fileID: 21300000, guid: 3bc781107c3aa114991a8afabee4880a, type: 3}
+    - time: 0.75
+      value: {fileID: 21300000, guid: e68b5314de798b14f8cb8b8d11dc35fc, type: 3}
+    attribute: SonnyGun
+    path: 
+    classID: 114
+    script: {fileID: 11500000, guid: daf536cf56f33ec4a9ae019418974e98, type: 3}
   m_SampleRate: 4
   m_WrapMode: 0
   m_Bounds:
@@ -45,11 +58,22 @@ AnimationClip:
       typeID: 212
       customType: 23
       isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 0
+      attribute: 1277756921
+      script: {fileID: 11500000, guid: daf536cf56f33ec4a9ae019418974e98, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: 21300000, guid: 78e699e9df0ecb24497ecbe34d6e4f6e, type: 3}
     - {fileID: 21300000, guid: 4aeb8f850288a28478266a1be28ea42e, type: 3}
     - {fileID: 21300000, guid: 481a5eb122ddbe448b988b65fad28b20, type: 3}
     - {fileID: 21300000, guid: 399faf8b1d00c2543a7bc6b98586c7e6, type: 3}
+    - {fileID: 21300000, guid: 46b244394e7354546a87a4de22479e4b, type: 3}
+    - {fileID: 21300000, guid: a6e09465f8fca344fbb1449e3fd05aae, type: 3}
+    - {fileID: 21300000, guid: 3bc781107c3aa114991a8afabee4880a, type: 3}
+    - {fileID: 21300000, guid: e68b5314de798b14f8cb8b8d11dc35fc, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
