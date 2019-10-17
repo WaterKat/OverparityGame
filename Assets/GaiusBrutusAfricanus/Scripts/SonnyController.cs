@@ -120,7 +120,7 @@ public class SonnyController : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bulletObject = Instantiate(bulletPrefab, rigidbody2d.position - new Vector2(0,0), Quaternion.identity);
+        GameObject bulletObject = Instantiate(bulletPrefab, rigidbody2d.position + new Vector2(80,40), Quaternion.identity);
         Bullet bullet = bulletObject.GetComponent<Bullet>();
         bullet.Shoot(lookDirection, bulletSpeed);
     }
