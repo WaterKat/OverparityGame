@@ -31,20 +31,32 @@ public class CharacterMovement2_5b : MonoBehaviour
     Vector2 lookDirection = new Vector2(1, 0);
     Vector2 spawnPoint1;
 
+    Animator playerAnimator;
+
     void Start()
     {
         HORIZ_SPEED = horizontalSpeed;
         VERT_SPEED = verticalSpeed;
         currentHealth = maxHealth;
 
+        playerAnimator = GetComponent<Animator>();
         rigidbody2d = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<Collider2D>();
         spawnPoint1 = rigidbody2d.position;
         //animator = GetComponent<Animator>();
     }
 
+    void UpdateAnimator()
+    {
+        playerAnimator.SetFloat("VelocityX", rigidbody2d.velocity.x);
+        playerAnimator.SetFloat("VelocityY", rigidbody2d.velocity.y);
+        playerAnimator.SetFloat("VelocityTotal", rigidbody2d.velocity.magnitude);
+    }
+
     void Update()
     {
+        UpdateAnimator();
+
         float H_Input = Input.GetAxis("Horizontal");
         float V_Input = Input.GetAxis("Vertical");
 
