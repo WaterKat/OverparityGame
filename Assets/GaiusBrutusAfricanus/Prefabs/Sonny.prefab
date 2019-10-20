@@ -98,7 +98,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -145,6 +145,7 @@ MonoBehaviour:
   speed: 5
   maxHealth: 1
   timeInvincible: 0.5
+  bulletSpeed: 50
   bulletPrefab: {fileID: 8296229972751281753, guid: 3b30dd2f7bd0d62428c0a73fc264b6af,
     type: 3}
   SonnyGun: {fileID: 21300000, guid: 6b437ee78a019ee40a47a697f14daeec, type: 3}

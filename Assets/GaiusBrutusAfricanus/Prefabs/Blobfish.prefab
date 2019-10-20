@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 9156091830062262929}
   - component: {fileID: 9156091830062262935}
   - component: {fileID: 9156091830062262930}
-  - component: {fileID: 253768429334169061}
   m_Layer: 11
   m_Name: Blobfish
   m_TagString: Untagged
@@ -100,7 +99,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -171,15 +170,3 @@ CapsuleCollider2D:
   m_Offset: {x: 0.01047767, y: 0.055742476}
   m_Size: {x: 1.3684065, y: 0.54438376}
   m_Direction: 1
---- !u!114 &253768429334169061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9156091830062262957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dd1dc1870792f44192ae65b9cc9cebb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

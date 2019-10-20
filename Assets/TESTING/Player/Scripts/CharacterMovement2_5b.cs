@@ -135,7 +135,7 @@ public class CharacterMovement2_5b : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bulletObject = Instantiate(bulletPrefab, rigidbody2d.position + new Vector2(.25f, 1f), Quaternion.identity);
+        GameObject bulletObject = Instantiate(bulletPrefab, rigidbody2d.position + new Vector2(.25f, .75f), Quaternion.identity);
         Bullet bullet = bulletObject.GetComponent<Bullet>();
         bullet.Shoot(lookDirection, bulletSpeed);
     }

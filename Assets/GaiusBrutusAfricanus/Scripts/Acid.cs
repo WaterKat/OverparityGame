@@ -5,7 +5,6 @@ using UnityEngine;
 public class Acid : MonoBehaviour
 {
     public float despawnTime = .1f;
-    public float acidSpeed = 100;
 
     Rigidbody2D rigidbody2d;
 
@@ -21,7 +20,7 @@ public class Acid : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        SonnyController sonny = other.collider.GetComponent<SonnyController>();
+        CharacterMovement2_5b sonny = other.collider.GetComponent<CharacterMovement2_5b>();
         if (sonny != null)
         {
             sonny.ChangeHealth(-1);

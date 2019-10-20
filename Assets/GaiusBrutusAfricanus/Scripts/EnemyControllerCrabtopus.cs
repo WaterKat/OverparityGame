@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class EnemyControllerCrabtopus : MonoBehaviour
 {
-    public float speed = 6f;
+    public float speed = 3f;
     public int health = 30;
+    public float acidSpeed = 1000f;
     public GameObject acidPrefab;
 
     bool dead = false;
@@ -67,7 +68,7 @@ public class EnemyControllerCrabtopus : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        SonnyController sonny = other.gameObject.GetComponent<SonnyController>();
+        CharacterMovement2_5b sonny = other.gameObject.GetComponent<CharacterMovement2_5b>();
         if (sonny != null)
         {
             sonny.ChangeHealth(-1);
@@ -76,9 +77,9 @@ public class EnemyControllerCrabtopus : MonoBehaviour
 
     void Shoot()
     {
-        Vector2 attack = new Vector2(-75, 0);
+        Vector2 attack = new Vector2(-1, -.3f);
         GameObject acidObject = Instantiate(acidPrefab, rigidbody2d.position, Quaternion.identity);
         Acid acid = acidObject.GetComponent<Acid>();
-        acid.Shoot(attack, acid.acidSpeed);
+        acid.Shoot(attack, acidSpeed);
     }
 }
