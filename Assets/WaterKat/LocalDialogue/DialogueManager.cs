@@ -2,6 +2,7 @@
 using WaterKat.Time;
 using WaterKat.UI;
 using WaterKat.Audio;
+using System;
 
 namespace WaterKat.Dialogue
 {
@@ -60,6 +61,15 @@ namespace WaterKat.Dialogue
             RequestDialogue(dialogueInfo);
         }
 
+        Action requestedAction;
+        string actionTimer;
+
+        public void RequestDialogue(DialogueInfo info, Action _action)
+        {
+            RequestDialogue(info);
+            TimerManager.AddTask(_action, info.duration+0.01f, out actionTimer);
+        }
+
         public void RequestDialogue(DialogueInfo info)
         {
             if (Animating) { return; }
@@ -98,6 +108,7 @@ namespace WaterKat.Dialogue
             {
                 AudioManager.StopSound(dialogueInfo.audio);
             }
+            TimerManager.OverrideTimer(actionTimer, 0.01f);
         }
 
         DialogueCharacterComponent FindCharacterComponent(DialogueCharacterInfo characterInfo)
