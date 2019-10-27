@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Acid : MonoBehaviour
 {
-    public float despawnTime = .1f;
+    public float despawnTime = 1f;
 
     Rigidbody2D rigidbody2d;
 

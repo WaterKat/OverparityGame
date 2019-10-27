@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
 
     public void Shoot(Vector2 direction, float force)
     {
-        direction *= new Vector2(1, .20f);
+        direction *= new Vector2(1, .75f);
         rigidbody2d.AddForce(direction * force);
     }
 

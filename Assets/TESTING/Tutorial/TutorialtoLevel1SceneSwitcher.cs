@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class TutorialtoLevel1SceneSwitcher : MonoBehaviour
 {
-    public string Level1 = "MovementTest";
+    public string menu;
+    public string Level1;
 
     public void GotoLevel1()
     {
@@ -14,7 +15,7 @@ public class TutorialtoLevel1SceneSwitcher : MonoBehaviour
 
     public void GotoMenuScene()
     {
-        SceneManager.LoadScene("menu");
+        SceneManager.LoadScene(menu);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
