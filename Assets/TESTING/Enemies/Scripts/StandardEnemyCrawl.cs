@@ -21,8 +21,39 @@ public class StandardEnemyCrawl : MonoBehaviour
 
     public Vector2 Velocity = new Vector2(3, 1);
 
+    [System.Serializable]
+    class Ticker
+    {
+        float currentTick = 0;
+        public float MaxTick = 1;
+
+        public bool TryTick()
+        {
+            if (currentTick > MaxTick) { currentTick = 0; }
+            currentTick += Time.deltaTime;
+            return currentTick >= MaxTick;
+        }
+    }
+
+    [SerializeField]
+    Ticker Idle = new Ticker();
+    [SerializeField]
+    Ticker PointPatrol = new Ticker();
+    [SerializeField]
+    Ticker Aggro = new Ticker();
+    [SerializeField]
+    Ticker Tired = new Ticker();
+    [SerializeField]
+    Ticker Stun = new Ticker();
+
     [SerializeField]
     List<Vector2> PatrolPath = new List<Vector2>();
+
+    public Vector2 PatrolPoint = Vector2.zero;
+    public Vector2 offSetPatrolPoint = Vector2.zero;
+    public float patrolDistance = 1;
+
+    public float AggroDistance = 3;
 
     [SerializeField]
     GameObject activePlayer;
@@ -53,15 +84,59 @@ public class StandardEnemyCrawl : MonoBehaviour
 
     void Update()
     {
-        Vector2 desiredDirection;
-
-        if (UpdateTargetPlayer())
+        Vector2 desiredDirection = Vector2.zero;
+        switch (enemyState)
         {
-            desiredDirection = (activePlayer.transform.position - transform.position).normalized;
-        }
-        else
-        {
-            desiredDirection = Vector2.zero;
+            case EnemyState.Idle:
+                enemyState = EnemyState.PointPatrol;
+                break;
+            case EnemyState.PointPatrol:
+                enemyState = EnemyState.PointPatrol;
+                if (PointPatrol.TryTick())
+                {
+                    offSetPatrolPoint = PatrolPoint + new Vector2(Random.Range(-patrolDistance, patrolDistance), Random.Range(-patrolDistance, patrolDistance));
+                }
+                desiredDirection = ((Vector3)offSetPatrolPoint - transform.position).normalized;
+                if (UpdateTargetPlayer())
+                {
+                    if (Vector3.Distance(activePlayer.transform.position, transform.position) < AggroDistance)
+                    {
+                        enemyState = EnemyState.Aggro;
+                    }
+                }
+                break;
+            case EnemyState.PathPatrol:
+                break;
+            case EnemyState.Aggro:
+                if (UpdateTargetPlayer())
+                {
+                    desiredDirection = (activePlayer.transform.position - transform.position).normalized;
+                    if (Vector3.Distance(activePlayer.transform.position, transform.position) > AggroDistance)
+                    {
+                        enemyState = EnemyState.Idle;
+                    }
+                }
+                else
+                {
+                    enemyState = EnemyState.Tired;
+                }
+                if (Aggro.TryTick())
+                {
+                    enemyState = EnemyState.Tired;
+                }
+                break;
+            case EnemyState.Stun:
+                if (Stun.TryTick())
+                {
+                    enemyState = EnemyState.Idle;
+                }
+                break;
+            case EnemyState.Tired:
+                if (Tired.TryTick())
+                {
+                    enemyState = EnemyState.Idle;
+                }
+                break;
         }
 
         enemyRigidbody.velocity = Vector2.Scale(desiredDirection, Velocity);

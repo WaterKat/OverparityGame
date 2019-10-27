@@ -41,7 +41,7 @@ namespace WaterKat.CustomEditors
 
             serializedObject.ApplyModifiedProperties();
 
-            // DrawDefaultInspector();
+             DrawDefaultInspector();
         }
     }
 }
