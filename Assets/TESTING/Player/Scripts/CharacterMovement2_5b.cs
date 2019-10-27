@@ -20,6 +20,7 @@ public class CharacterMovement2_5b : MonoBehaviour
     float HORIZ_SPEED;
     float VERT_SPEED;
     int currentHealth;
+    [SerializeField]
     bool hasGun = false;
     bool isInvincible;
     float invincibleTimer;

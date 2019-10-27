@@ -14,10 +14,12 @@ namespace WaterKat.SaveManagement
         private static Dictionary<int, SaveStation> saveStations = new Dictionary<int, SaveStation>();
         private void FixDuplicates()
         {
+            if (this.SaveStationID == 0) { return; }
             saveStations = new Dictionary<int, SaveStation>();
             SaveStation[] sceneSaveStations = GameObject.FindObjectsOfType<SaveStation>();
             foreach (SaveStation station in sceneSaveStations)
             {
+                if (station.SaveStationID == 0) { continue; }
                 if (station == this) { continue; }
                 if (saveStations.ContainsKey(station.SaveStationID))
                 {
