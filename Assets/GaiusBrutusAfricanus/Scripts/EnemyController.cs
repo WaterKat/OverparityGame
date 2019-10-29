@@ -7,7 +7,6 @@ public class EnemyController : MonoBehaviour
 
     public float speed = 100f;
     public float patrolTime = 4;
-    public int health = 3;
 
     bool dead = false;
     Rigidbody2D rigidbody2d;
@@ -25,19 +24,6 @@ public class EnemyController : MonoBehaviour
         right = new Vector2(1, 0);
     }
 
-    public void Damage(float despawnTime)
-    {
-        --health;
-        if (health <= 0)
-        {
-            dead = true;
-            animator.SetTrigger("Dead");
-            rigidbody2d.gravityScale = 0;
-            Destroy(collision);
-            Destroy(gameObject, despawnTime);
-        }
-    }
-
     void Update()
     {
         if (!dead)
@@ -50,15 +36,6 @@ public class EnemyController : MonoBehaviour
                 position += -1 * right * speed * Time.deltaTime;
 
             rigidbody2d.MovePosition(position);
-        }
-    }
-
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        CharacterMovement2_5b sonny = other.gameObject.GetComponent<CharacterMovement2_5b>();
-        if(sonny !=null)
-        {
-            sonny.ChangeHealth(-1);
         }
     }
 }

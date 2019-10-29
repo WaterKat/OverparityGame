@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        EnemyController enemy = other.collider.GetComponent<EnemyController>();
+        EnemyDamaged enemy = other.collider.GetComponent<EnemyDamaged>();
         if (enemy != null)
         {
             enemy.Damage(despawnTime);

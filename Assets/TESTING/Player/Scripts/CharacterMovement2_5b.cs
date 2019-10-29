@@ -128,7 +128,6 @@ public class CharacterMovement2_5b : MonoBehaviour
         {
             rigidbody2d.transform.position = spawnPoint1;
             currentHealth = maxHealth;
-
         }
 
         healthBar.Set(currentHealth, maxHealth);
@@ -138,7 +137,7 @@ public class CharacterMovement2_5b : MonoBehaviour
     {
         GameObject bulletObject = Instantiate(bulletPrefab, rigidbody2d.position + new Vector2(.25f, .75f), Quaternion.identity);
         Bullet bullet = bulletObject.GetComponent<Bullet>();
-        bullet.Shoot(lookDirection, bulletSpeed);
+        bullet.Shoot(lookDirection + new Vector2(1, 0), bulletSpeed);
     }
 
     public void getGun()

@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyControllerCrabtopus : MonoBehaviour
 {
     public float speed = 3f;
-    public int health = 30;
     public float acidSpeed = 1000f;
     public GameObject acidPrefab;
 
@@ -26,19 +25,6 @@ public class EnemyControllerCrabtopus : MonoBehaviour
 
         time = Time.time;
         right = new Vector2(1, 0);
-    }
-
-    public void Damage(float despawnTime)
-    {
-        --health;
-        if (health <= 0)
-        {
-            dead = true;
-            //animator.SetTrigger("Dead");
-            rigidbody2d.gravityScale = 0;
-            Destroy(collision);
-            Destroy(gameObject, despawnTime);
-        }
     }
 
     void Update()
@@ -64,15 +50,6 @@ public class EnemyControllerCrabtopus : MonoBehaviour
             position += -1 * right * speed * Time.deltaTime;
 
         rigidbody2d.MovePosition(position);
-    }
-
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        CharacterMovement2_5b sonny = other.gameObject.GetComponent<CharacterMovement2_5b>();
-        if (sonny != null)
-        {
-            sonny.ChangeHealth(-1);
-        }
     }
 
     void Shoot()

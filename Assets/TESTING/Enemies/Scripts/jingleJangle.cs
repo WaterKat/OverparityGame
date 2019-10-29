@@ -6,7 +6,7 @@ public class jingleJangle : MonoBehaviour
 {
     public BlindBoss blindboss;
 
-    void OnTriggerStay2D()
+    void OnTriggerEnter2D()
     {
         blindboss.triggered = true;
     }
