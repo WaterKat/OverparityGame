@@ -16,12 +16,12 @@ public class CharacterMovement2_5b : MonoBehaviour
     public GameObject bulletPrefab;
     public Sprite SonnyGun;
     public HealthBar healthBar;
+    public bool hasGun = false;
 
     float HORIZ_SPEED;
     float VERT_SPEED;
     int currentHealth;
     [SerializeField]
-    bool hasGun = false;
     bool isInvincible;
     float invincibleTimer;
     float time1 = 0f;
@@ -135,9 +135,17 @@ public class CharacterMovement2_5b : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bulletObject = Instantiate(bulletPrefab, rigidbody2d.position + new Vector2(.25f, .75f), Quaternion.identity);
+        Vector2 offset;
+        if (lookDirection.x < 0)
+            offset = new Vector2(-.6f, .5f);
+        else
+            offset = new Vector2(.6f, .5f);
+        GameObject bulletObject = Instantiate(bulletPrefab, rigidbody2d.position + offset, Quaternion.identity);
         Bullet bullet = bulletObject.GetComponent<Bullet>();
-        bullet.Shoot(lookDirection + new Vector2(1, 0), bulletSpeed);
+        if (lookDirection.x > 0)
+            bullet.Shoot(lookDirection + new Vector2(1, 0), bulletSpeed);
+        else
+            bullet.Shoot(lookDirection + new Vector2(-1, 0), bulletSpeed);
     }
 
     public void getGun()

@@ -54,7 +54,7 @@ public class SonnyController : MonoBehaviour
                 time1 = Time.time;
             }
         }*/
-        else if (Input.GetKeyDown(KeyCode.F))// && hasGun)
+        else if (Input.GetKeyDown(KeyCode.F) && hasGun)
         {
             time2 = Time.time;
             if (time2 - time1 >= .5)
@@ -120,7 +120,12 @@ public class SonnyController : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bulletObject = Instantiate(bulletPrefab, rigidbody2d.position + new Vector2(80,40), Quaternion.identity);
+        Vector2 offset;
+        if (lookDirection.x < 0)
+            offset = new Vector2(-80, 40);
+        else
+            offset = new Vector2(80, 40);
+        GameObject bulletObject = Instantiate(bulletPrefab, rigidbody2d.position + offset, Quaternion.identity);
         Bullet bullet = bulletObject.GetComponent<Bullet>();
         bullet.Shoot(lookDirection, bulletSpeed);
     }

@@ -7,6 +7,8 @@ public class EnemyControllerCrabtopus : MonoBehaviour
     public float speed = 3f;
     public float acidSpeed = 1000f;
     public GameObject acidPrefab;
+    public GameObject player;
+    public bool triggered = false;
 
     bool dead = false;
     float time;
@@ -29,18 +31,18 @@ public class EnemyControllerCrabtopus : MonoBehaviour
 
     void Update()
     {
-        if (!dead)
+        if (!dead && player != null)
         {
             if (Time.time - time > 1)
             {
                 Shoot();
                 time = Time.time;
             }
-            move();
+            //move();
         }
     }
 
-    void move()
+    /*void move()
     {
         Vector2 position = rigidbody2d.position;
 
@@ -50,11 +52,16 @@ public class EnemyControllerCrabtopus : MonoBehaviour
             position += -1 * right * speed * Time.deltaTime;
 
         rigidbody2d.MovePosition(position);
-    }
+    }*/
 
     void Shoot()
     {
-        Vector2 attack = new Vector2(-1, -.3f);
+        Vector2 attack = (Vector2)(transform.position - player.transform.position);
+        
+        Debug.Log(player.transform.position);
+        Debug.Log(transform.position);
+        Debug.Log(attack);
+
         GameObject acidObject = Instantiate(acidPrefab, rigidbody2d.position, Quaternion.identity);
         Acid acid = acidObject.GetComponent<Acid>();
         acid.Shoot(attack, acidSpeed);
