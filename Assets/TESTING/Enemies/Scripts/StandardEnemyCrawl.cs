@@ -84,8 +84,6 @@ public class StandardEnemyCrawl : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(activePlayer.transform.position);
-        Debug.Log(transform.position);
         Vector2 desiredDirection = Vector2.zero;
         switch (enemyState)
         {

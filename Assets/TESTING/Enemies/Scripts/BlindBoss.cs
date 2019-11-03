@@ -31,6 +31,8 @@ public class BlindBoss : MonoBehaviour
 
     Rigidbody2D enemyRigidbody;
     //Collider2D enemyCollider;
+
+    Vector2 position1, position2, position3, position4;
     void Start()
     {
         enemyRigidbody = GetComponent<Rigidbody2D>();
@@ -57,18 +59,59 @@ public class BlindBoss : MonoBehaviour
     {
         if(triggered)
         {
-            Vector2 desiredDirection;
+            Vector2 desiredDirection = Pursue();
+            enemyRigidbody.velocity = Vector2.Scale(desiredDirection, Velocity);
 
-            if (UpdateTargetPlayer())
-            {
-                desiredDirection = (activePlayer.transform.position - transform.position).normalized;
-            }
+            if (position1 == null)
+                position1 = enemyRigidbody.position;
+            else if (position2 == null)
+                position2 = enemyRigidbody.position;
+            else if (position3 == null)
+                position3 = enemyRigidbody.position;
+            else if (position4 == null)
+                position4 = enemyRigidbody.position;
             else
             {
-                desiredDirection = Vector2.zero;
+                position1 = position2;
+                position2 = position3;
+                position3 = position4;
+                position4 = enemyRigidbody.position;
+                MoveIt();
             }
+        }
+    }
 
-            enemyRigidbody.velocity = Vector2.Scale(desiredDirection, Velocity);
+    Vector2 Pursue()
+    {
+        Vector2 desiredDirection;
+
+        if (UpdateTargetPlayer())
+        {
+            desiredDirection = (activePlayer.transform.position - transform.position).normalized;
+        }
+        else
+        {
+            desiredDirection = Vector2.zero;
+        }
+
+        return desiredDirection;
+    }
+
+    void MoveIt()
+    {
+        Vector2 desiredDirection;
+        //CharacterMovement2_5b sonny = other.collider.GetComponent<CharacterMovement2_5b>();
+        
+        //if (sonny == null)
+        {
+            Vector2 deltaPosition = (position4 + position3) - (position2 + position1);
+            //Debug.Log((position4 + position3) - (position2 + position1));
+            desiredDirection = Pursue();
+
+            if (Mathf.Approximately(deltaPosition.magnitude, 0))
+            {
+                enemyRigidbody.transform.position -= new Vector3(desiredDirection.x * Velocity.x, desiredDirection.y * Velocity.y);
+            }
         }
     }
 }

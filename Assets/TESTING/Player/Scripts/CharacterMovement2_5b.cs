@@ -12,7 +12,7 @@ public class CharacterMovement2_5b : MonoBehaviour
     public int maxHealth = 5;
     public int health { get { return currentHealth; } }
     public float timeInvincible = .5f;
-    public float bulletSpeed = 500f;
+    public float bulletSpeed = 5f;
     public GameObject bulletPrefab;
     public Sprite SonnyGun;
     public HealthBar healthBar;

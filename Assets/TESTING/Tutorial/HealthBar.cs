@@ -15,7 +15,7 @@ public class HealthBar : MonoBehaviour
 
     public void Set(int currentHealth, int maxHealth)
     {
-        Debug.Log(currentHealth);
+        //Debug.Log(currentHealth);
         bar.localScale = new Vector2(((float)currentHealth / maxHealth)*50, 50f);
     }
 }

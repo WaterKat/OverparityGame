@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float despawnTime = 2f;
+    public float despawnTime = .2f;
 
     Rigidbody2D rigidbody2d;
 

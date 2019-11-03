@@ -211,8 +211,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 0.21158738
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -272,12 +272,13 @@ MonoBehaviour:
   verticalSpeed: 5
   maxHealth: 5
   timeInvincible: 0.5
-  bulletSpeed: 500
+  bulletSpeed: 5
   bulletPrefab: {fileID: 8296229972751281753, guid: 3b30dd2f7bd0d62428c0a73fc264b6af,
     type: 3}
   SonnyGun: {fileID: 21300000, guid: 0bf020f0789ad694b8ac8957d1e2c032, type: 3}
   healthBar: {fileID: 0}
   hasGun: 0
+  isInvincible: 0
 --- !u!114 &8862009774563562523
 MonoBehaviour:
   m_ObjectHideFlags: 0

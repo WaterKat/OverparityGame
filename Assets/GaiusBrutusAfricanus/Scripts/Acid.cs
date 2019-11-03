@@ -13,9 +13,9 @@ public class Acid : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
     }
 
-    public void Shoot(Vector2 direction, float force)
+    public void Shoot(Vector2 direction, float magnitude)
     {
-        rigidbody2d.AddForce(direction * force);
+        rigidbody2d.AddForce(direction * magnitude);
     }
 
     void OnCollisionEnter2D(Collision2D other)
