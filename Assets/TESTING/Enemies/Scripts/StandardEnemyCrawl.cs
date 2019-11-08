@@ -96,7 +96,7 @@ public class StandardEnemyCrawl : MonoBehaviour
                 {
                     offSetPatrolPoint = PatrolPoint + new Vector2(Random.Range(-patrolDistance, patrolDistance), Random.Range(-patrolDistance, patrolDistance));
                 }
-                desiredDirection = ((Vector3)offSetPatrolPoint - transform.position).normalized;
+                desiredDirection = ((Vector3)offSetPatrolPoint - transform.position);
                 if (UpdateTargetPlayer())
                 {
                     if (Vector3.Distance(activePlayer.transform.position, transform.position) < AggroDistance)
@@ -110,7 +110,7 @@ public class StandardEnemyCrawl : MonoBehaviour
             case EnemyState.Aggro:
                 if (UpdateTargetPlayer())
                 {
-                    desiredDirection = (activePlayer.transform.position - transform.position).normalized;
+                    desiredDirection = activePlayer.transform.position - transform.position;
                     if (Vector3.Distance(activePlayer.transform.position, transform.position) > AggroDistance)
                     {
                         enemyState = EnemyState.Idle;
@@ -139,6 +139,6 @@ public class StandardEnemyCrawl : MonoBehaviour
                 break;
         }
 
-        enemyRigidbody.velocity = Vector2.Scale(desiredDirection, Velocity);
+        enemyRigidbody.velocity = Vector2.Scale(desiredDirection.normalized * Mathf.Max(Mathf.Min(desiredDirection.magnitude / Velocity.magnitude, 1), 1), Velocity);
     }
 }
