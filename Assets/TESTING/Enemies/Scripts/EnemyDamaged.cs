@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnemyDamaged : MonoBehaviour
 {
-    public int health = 3;
+    public int HEALTH = 3;
+    private int health;
 
     Rigidbody2D rb;
     bool dead = false;
@@ -12,6 +13,7 @@ public class EnemyDamaged : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        health = HEALTH;
     }
 
     public void Damage(float despawnTime)
@@ -25,5 +27,10 @@ public class EnemyDamaged : MonoBehaviour
             Destroy(rb);
             Destroy(gameObject, despawnTime);
         }
+    }
+
+    public void ChangeHealth(int amount)
+    {
+        health += amount;
     }
 }
