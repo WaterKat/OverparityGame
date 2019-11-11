@@ -26,6 +26,14 @@ public class Bullet : MonoBehaviour
         {
             enemy.Damage(despawnTime);
         }
+        else
+        {
+            EnemyDamagedRevives e = other.collider.GetComponent<EnemyDamagedRevives>();
+            if (e != null)
+            {
+                e.Damage(despawnTime);
+            }
+        }
 
         /*EnemyControllerCrabtopus cenemy = other.collider.GetComponent<EnemyControllerCrabtopus>();
         if (cenemy != null)
