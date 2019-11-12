@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5387832997283254337}
   - component: {fileID: 5387832997283254336}
   - component: {fileID: 5387832997283254339}
-  - component: {fileID: 5387832997283254350}
+  - component: {fileID: 1523984153719620634}
   m_Layer: 0
-  m_Name: trigger
+  m_Name: BBtrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,7 +107,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.123291, y: 2.0242896}
   m_EdgeRadius: 0
---- !u!114 &5387832997283254350
+--- !u!114 &1523984153719620634
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5387832997283254338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10122c94db65c1948b55cc8fd06ff0de, type: 3}
+  m_Script: {fileID: 11500000, guid: 20357a51d9c20df4ca5c6773f51547ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   blindboss: {fileID: 0}
