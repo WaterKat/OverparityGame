@@ -7705,7 +7705,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 37b24133bdb94794281b9e48a535bde4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a07f565025b3949469baaf9d754311ef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8864,6 +8864,11 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.b
       value: 0.16078432
       objectReference: {fileID: 0}
+    - target: {fileID: 6287235579155597573, guid: d05a995694c6d9640bd61e1efd4c66a9,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.36416256
+      objectReference: {fileID: 0}
     - target: {fileID: 8237118155626825308, guid: d05a995694c6d9640bd61e1efd4c66a9,
         type: 3}
       propertyPath: m_Offset.x
@@ -8898,11 +8903,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 6287235579155597573, guid: d05a995694c6d9640bd61e1efd4c66a9,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.36416256
       objectReference: {fileID: 0}
     - target: {fileID: 944198235, guid: d05a995694c6d9640bd61e1efd4c66a9, type: 3}
       propertyPath: m_IsActive
@@ -9689,6 +9689,11 @@ PrefabInstance:
       value: 0.932698
       objectReference: {fileID: 0}
     - target: {fileID: 5387832997283254350, guid: 4f1e4bdf930e0b24caa724de79d7c53f,
+        type: 3}
+      propertyPath: blindboss
+      value: 
+      objectReference: {fileID: 297664850}
+    - target: {fileID: 1523984153719620634, guid: 4f1e4bdf930e0b24caa724de79d7c53f,
         type: 3}
       propertyPath: blindboss
       value: 

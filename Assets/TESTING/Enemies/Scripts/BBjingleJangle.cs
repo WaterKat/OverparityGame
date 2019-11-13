@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class jingleJangle : MonoBehaviour
+public class BBjingleJangle : MonoBehaviour
 {
     public BlindBoss blindboss;
 

@@ -1232,7 +1232,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231341733}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.93816376, y: -1.311039, z: -9.96875}
+  m_LocalPosition: {x: 0.19412994, y: -1.3960915, z: -9.96875}
   m_LocalScale: {x: 0.85637665, y: 1.2530429, z: 1.2530429}
   m_Children: []
   m_Father: {fileID: 591897424}
@@ -1926,7 +1926,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2009014054}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.8214798, y: -3.7639809, z: -9.96875}
+  m_LocalPosition: {x: 2.5022507, y: -3.7639809, z: -9.96875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 615590836}
@@ -2183,6 +2183,11 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1233576978}
+    - target: {fileID: 6153978539016955176, guid: d05a995694c6d9640bd61e1efd4c66a9,
+        type: 3}
+      propertyPath: hasGun
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8237118155626825308, guid: d05a995694c6d9640bd61e1efd4c66a9,
         type: 3}
       propertyPath: m_Offset.x
