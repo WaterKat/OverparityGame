@@ -101,6 +101,7 @@ public class FinalBoss : MonoBehaviour
                 }
             }     
         }
+        Debug.Log("AyyLmao");
     }
 
     Vector2 Pursue()

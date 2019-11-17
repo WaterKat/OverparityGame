@@ -17,8 +17,7 @@ public class CharacterMovement2_5b : MonoBehaviour
     public Sprite SonnyGun;
     public HealthBar healthBar;
     public bool hasGun = false;
-    public Vector2 spawnPoint;
-
+    
     float HORIZ_SPEED;
     float VERT_SPEED;
     int currentHealth;
@@ -30,6 +29,7 @@ public class CharacterMovement2_5b : MonoBehaviour
     Rigidbody2D rigidbody2d;
     Collider2D playerCollider;
     //Animator animator;
+    Vector2 spawnPoint;
     Vector2 lookDirection = new Vector2(1, 0);
 
     Animator playerAnimator;
