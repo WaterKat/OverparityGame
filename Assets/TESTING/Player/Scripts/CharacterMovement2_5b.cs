@@ -17,6 +17,7 @@ public class CharacterMovement2_5b : MonoBehaviour
     public Sprite SonnyGun;
     public HealthBar healthBar;
     public bool hasGun = false;
+    public Vector2 spawnPoint;
 
     float HORIZ_SPEED;
     float VERT_SPEED;
@@ -30,7 +31,6 @@ public class CharacterMovement2_5b : MonoBehaviour
     Collider2D playerCollider;
     //Animator animator;
     Vector2 lookDirection = new Vector2(1, 0);
-    Vector2 spawnPoint1;
 
     Animator playerAnimator;
 
@@ -43,7 +43,7 @@ public class CharacterMovement2_5b : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         rigidbody2d = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<Collider2D>();
-        spawnPoint1 = rigidbody2d.position;
+        spawnPoint = rigidbody2d.position;
         //animator = GetComponent<Animator>();
     }
 
@@ -126,7 +126,7 @@ public class CharacterMovement2_5b : MonoBehaviour
 
         if (health <= 0)
         {
-            rigidbody2d.transform.position = spawnPoint1;
+            rigidbody2d.transform.position = spawnPoint;
             currentHealth = maxHealth;
         }
 
