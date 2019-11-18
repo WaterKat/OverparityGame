@@ -7,6 +7,8 @@ public class EnemyDamaged : MonoBehaviour
     public int HEALTH = 3;
     private int health;
 
+    public string DamageSound = "TardigradeSqueal";
+
     Rigidbody2D rb;
     bool dead = false;
 
@@ -18,10 +20,13 @@ public class EnemyDamaged : MonoBehaviour
 
     public void Damage(float despawnTime)
     {
+        WaterKat.Audio.AudioManager.PlaySound(DamageSound);
+
         --health;
         if (health <= 0)
         {
             dead = true;
+
             //animator.SetTrigger("Dead");
             rb.gravityScale = 0;
             Destroy(rb);

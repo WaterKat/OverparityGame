@@ -44,11 +44,25 @@ public class CharacterMovement2_5b : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<Collider2D>();
         spawnPoint = rigidbody2d.position;
+
+        WaterKat.Time.TimerManager.AddTimer(0, out footsteptimer);
         //animator = GetComponent<Animator>();
     }
-
+    string footsteptimer = "";
     void UpdateAnimator()
     {
+        if (rigidbody2d.velocity.magnitude > 0.25f && WaterKat.Time.TimerManager.TimerMet(footsteptimer))
+        {
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                WaterKat.Time.TimerManager.OverrideTimer(footsteptimer, 0.25f);
+            }
+            else
+            {
+                WaterKat.Time.TimerManager.OverrideTimer(footsteptimer, 0.5f);
+            }
+            WaterKat.Audio.AudioManager.PlaySound("footstep_" + (int)Random.Range(1, 8));
+        }
         playerAnimator.SetFloat("VelocityX", rigidbody2d.velocity.x);
         playerAnimator.SetFloat("VelocityY", rigidbody2d.velocity.y);
         playerAnimator.SetFloat("VelocityTotal", rigidbody2d.velocity.magnitude);
@@ -66,7 +80,7 @@ public class CharacterMovement2_5b : MonoBehaviour
             horizontalSpeed = HORIZ_SPEED / 2;
             verticalSpeed = VERT_SPEED / 2;
         }
-        else if (Input.GetKeyDown(KeyCode.LeftShift))
+        else if (Input.GetKey(KeyCode.LeftShift))
         {
             horizontalSpeed = HORIZ_SPEED * 2;
             verticalSpeed = VERT_SPEED * 2;

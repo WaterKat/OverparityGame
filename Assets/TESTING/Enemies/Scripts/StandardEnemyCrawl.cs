@@ -71,7 +71,7 @@ public class StandardEnemyCrawl : MonoBehaviour
         activePlayer = GameObject.FindGameObjectWithTag("Player");
         return activePlayer != null;
     }
-
+    /*
     void OnDrawGizmosSelected()
     {
         
@@ -81,7 +81,7 @@ public class StandardEnemyCrawl : MonoBehaviour
             Gizmos.DrawSphere(transform.position, 1);
         }
     }
-
+    */
     void Update()
     {
         Vector2 desiredDirection = Vector2.zero;
