@@ -4080,16 +4080,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.932698
       objectReference: {fileID: 0}
-    - target: {fileID: 5387832997283254350, guid: 4f1e4bdf930e0b24caa724de79d7c53f,
-        type: 3}
-      propertyPath: blindboss
-      value: 
-      objectReference: {fileID: 297664850}
-    - target: {fileID: 1523984153719620634, guid: 4f1e4bdf930e0b24caa724de79d7c53f,
-        type: 3}
-      propertyPath: blindboss
-      value: 
-      objectReference: {fileID: 297664850}
     - target: {fileID: 5387832997283254336, guid: 4f1e4bdf930e0b24caa724de79d7c53f,
         type: 3}
       propertyPath: m_Sprite
@@ -4100,6 +4090,16 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5387832997283254350, guid: 4f1e4bdf930e0b24caa724de79d7c53f,
+        type: 3}
+      propertyPath: blindboss
+      value: 
+      objectReference: {fileID: 297664850}
+    - target: {fileID: 1523984153719620634, guid: 4f1e4bdf930e0b24caa724de79d7c53f,
+        type: 3}
+      propertyPath: blindboss
+      value: 
+      objectReference: {fileID: 297664850}
     m_RemovedComponents:
     - {fileID: 1523984153719620634, guid: 4f1e4bdf930e0b24caa724de79d7c53f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4f1e4bdf930e0b24caa724de79d7c53f, type: 3}
@@ -5528,7 +5528,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6, y: 1.6}
+    oldSize: {x: 2.2857144, y: 2.2857144}
     newSize: {x: 1.6, y: 1.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5574,7 +5574,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 310e7e90c3612fb40b44d93fa9976070, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 883d7d259c0f4bd46a5f85fdfdc6a879, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6116,7 +6116,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6, y: 1.6}
+    oldSize: {x: 2.2857144, y: 2.2857144}
     newSize: {x: 1.6, y: 1.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6162,7 +6162,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 310e7e90c3612fb40b44d93fa9976070, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 883d7d259c0f4bd46a5f85fdfdc6a879, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8126,7 +8126,7 @@ PrefabInstance:
     - target: {fileID: 9161961674720533716, guid: 516ee7df92d524848be2781b1843457e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9161961674720533716, guid: 516ee7df92d524848be2781b1843457e,
         type: 3}
@@ -8997,6 +8997,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1897025157}
+    - target: {fileID: 944198235, guid: d05a995694c6d9640bd61e1efd4c66a9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1698929263, guid: d05a995694c6d9640bd61e1efd4c66a9, type: 3}
       propertyPath: m_BackGroundColor.r
       value: 0.10588236
@@ -9048,10 +9052,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 944198235, guid: d05a995694c6d9640bd61e1efd4c66a9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05a995694c6d9640bd61e1efd4c66a9, type: 3}
@@ -9838,16 +9838,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.932698
       objectReference: {fileID: 0}
-    - target: {fileID: 5387832997283254350, guid: 4f1e4bdf930e0b24caa724de79d7c53f,
-        type: 3}
-      propertyPath: blindboss
-      value: 
-      objectReference: {fileID: 297664850}
-    - target: {fileID: 1523984153719620634, guid: 4f1e4bdf930e0b24caa724de79d7c53f,
-        type: 3}
-      propertyPath: blindboss
-      value: 
-      objectReference: {fileID: 297664850}
     - target: {fileID: 5387832997283254336, guid: 4f1e4bdf930e0b24caa724de79d7c53f,
         type: 3}
       propertyPath: m_Sprite
@@ -9858,6 +9848,16 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5387832997283254350, guid: 4f1e4bdf930e0b24caa724de79d7c53f,
+        type: 3}
+      propertyPath: blindboss
+      value: 
+      objectReference: {fileID: 297664850}
+    - target: {fileID: 1523984153719620634, guid: 4f1e4bdf930e0b24caa724de79d7c53f,
+        type: 3}
+      propertyPath: blindboss
+      value: 
+      objectReference: {fileID: 297664850}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f1e4bdf930e0b24caa724de79d7c53f, type: 3}
 --- !u!1001 &8431232936636784823
