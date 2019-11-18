@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TutorialtoLevel1SceneSwitcher : MonoBehaviour
+public class SceneSwitcher : MonoBehaviour
 {
     public string menu;
-    public string Level1;
+    public string Level;
 
-    public void GotoLevel1()
+    public void GotoLevel()
     {
-        SceneManager.LoadScene(Level1);
+        SceneManager.LoadScene(Level);
     }
 
     public void GotoMenuScene()
@@ -22,6 +22,6 @@ public class TutorialtoLevel1SceneSwitcher : MonoBehaviour
     {
         GameObject thing = other.gameObject;
         if (thing.tag == "Player")
-            GotoLevel1();
+            GotoLevel();
     }
 }

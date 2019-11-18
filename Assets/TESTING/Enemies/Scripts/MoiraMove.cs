@@ -20,7 +20,7 @@ public class MoiraMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rigidbody2d.velocity = new Vector2(1,0);
-        anim.SetFloat("Blend", rigidbody2d.velocity.x + rigidbody2d.velocity.y);
+        //rigidbody2d.velocity = new Vector2(1,0);
+        anim.SetFloat("Blend", rigidbody2d.velocity.x); //+ rigidbody2d.velocity.y);
     }
 }
