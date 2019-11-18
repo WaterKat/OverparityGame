@@ -5,9 +5,26 @@ using UnityEngine;
 public class FinalBossJingleJangle : MonoBehaviour
 {
     public FinalBoss fb;
+    Rigidbody2D rb;
 
-    void OnTriggerEnter2D()
+    void Start()
     {
-        fb.triggered = true;
+        rb = fb.GetComponent<Rigidbody2D>();
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        GameObject thing = other.gameObject;
+        if (thing.tag == "Player")
+        {
+            fb.triggered = true;
+            ++fb.numTriggers;
+            if (fb.numTriggers == 1)
+                rb.position = rb.position + new Vector2(0, 20);
+            else if(fb.numTriggers == 2)
+                rb.position = rb.position + new Vector2(0, -30);
+        }
+        Destroy(gameObject);
+        Debug.Log(fb.numTriggers);
     }
 }

@@ -7,6 +7,9 @@ using UnityEngine;
 
 public class StandardEnemyCrawl : MonoBehaviour
 {
+    Rigidbody2D rigidbody2d;
+    Animator anim;
+
     public enum EnemyState
     {
         Idle = 0,
@@ -63,6 +66,7 @@ public class StandardEnemyCrawl : MonoBehaviour
     void Start()
     {
         enemyRigidbody = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         //enemyCollider = GetComponent<Collider2D>();
     }
 
@@ -140,5 +144,6 @@ public class StandardEnemyCrawl : MonoBehaviour
         }
 
         enemyRigidbody.velocity = Vector2.Scale(desiredDirection.normalized * Mathf.Max(Mathf.Min(desiredDirection.magnitude / Velocity.magnitude, 1), 1), Velocity);
+        anim.SetFloat("Blend", enemyRigidbody.velocity.x);
     }
 }

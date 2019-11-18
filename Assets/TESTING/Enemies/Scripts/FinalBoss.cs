@@ -9,6 +9,7 @@ public class FinalBoss : MonoBehaviour
 {
     public int MaxX = 150;
     public int YMove = 30;
+    public int numTriggers = 1;
     float xDistMoved = 0;
     bool aggro1 = true;
 
@@ -91,7 +92,7 @@ public class FinalBoss : MonoBehaviour
             if (aggro1)
             {
                 xDistMoved += (position4.x + position3.x) - (position2.x + position1.x);
-                Debug.Log(xDistMoved);
+                //Debug.Log(xDistMoved);
                 if (xDistMoved > MaxX)
                 {
                     triggered = false;
@@ -101,7 +102,7 @@ public class FinalBoss : MonoBehaviour
                 }
             }     
         }
-        Debug.Log("AyyLmao");
+        //Debug.Log("AyyLmao");
     }
 
     Vector2 Pursue()
