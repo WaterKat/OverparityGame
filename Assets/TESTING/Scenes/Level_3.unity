@@ -122,7 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 48596109}
   - component: {fileID: 48596110}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (67)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 60644463}
   - component: {fileID: 60644464}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (58)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,7 +236,7 @@ GameObject:
   m_Component:
   - component: {fileID: 68135913}
   - component: {fileID: 68135914}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (63)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 165919280}
   - component: {fileID: 165919281}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -473,7 +473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 172854562}
   - component: {fileID: 172854563}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,7 +530,7 @@ GameObject:
   m_Component:
   - component: {fileID: 183698310}
   - component: {fileID: 183698311}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -656,7 +656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 198983057}
   - component: {fileID: 198983058}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -713,7 +713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 204720918}
   - component: {fileID: 204720919}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -770,7 +770,7 @@ GameObject:
   m_Component:
   - component: {fileID: 234427326}
   - component: {fileID: 234427327}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -884,10 +884,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1342442522683657658, guid: adcaaffa7a4ecb8469f3144708f74d81,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.006823063
+      objectReference: {fileID: 0}
+    - target: {fileID: 1342442522683657658, guid: adcaaffa7a4ecb8469f3144708f74d81,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.8213167
+      objectReference: {fileID: 0}
     - target: {fileID: 695568532723785871, guid: adcaaffa7a4ecb8469f3144708f74d81,
         type: 3}
       propertyPath: m_Mass
-      value: 9.871016
+      value: 9.221754
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adcaaffa7a4ecb8469f3144708f74d81, type: 3}
@@ -935,12 +945,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b7ac2f3e465784689a5513a7a446ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxX: 100
+  MaxX: 250
   YMove: 80
   numTriggers: 0
   triggered: 0
   enemyState: 0
-  Velocity: {x: 6, y: 2}
+  Velocity: {x: 3, y: 1.5}
   PatrolPath: []
   activePlayer: {fileID: 145960879}
 --- !u!70 &307455572
@@ -950,7 +960,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307455568}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1005,7 +1015,7 @@ GameObject:
   m_Component:
   - component: {fileID: 322276266}
   - component: {fileID: 322276267}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1062,7 +1072,7 @@ GameObject:
   m_Component:
   - component: {fileID: 332072065}
   - component: {fileID: 332072066}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1119,7 +1129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 343237188}
   - component: {fileID: 343237189}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1176,7 +1186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 359343106}
   - component: {fileID: 359343107}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (56)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1338,7 +1348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 379329916}
   - component: {fileID: 379329917}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1401,7 +1411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 393676920}
   - component: {fileID: 393676921}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (60)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1458,7 +1468,7 @@ GameObject:
   m_Component:
   - component: {fileID: 402518463}
   - component: {fileID: 402518464}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (68)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1515,7 +1525,7 @@ GameObject:
   m_Component:
   - component: {fileID: 421298039}
   - component: {fileID: 421298040}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1572,7 +1582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 439206030}
   - component: {fileID: 439206031}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1629,7 +1639,7 @@ GameObject:
   m_Component:
   - component: {fileID: 444120053}
   - component: {fileID: 444120054}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1686,7 +1696,7 @@ GameObject:
   m_Component:
   - component: {fileID: 447758522}
   - component: {fileID: 447758523}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (46)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1743,7 +1753,7 @@ GameObject:
   m_Component:
   - component: {fileID: 451208773}
   - component: {fileID: 451208774}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (61)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1863,7 +1873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 498325826}
   - component: {fileID: 498325827}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1920,7 +1930,7 @@ GameObject:
   m_Component:
   - component: {fileID: 503601388}
   - component: {fileID: 503601389}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (49)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1983,7 +1993,7 @@ GameObject:
   m_Component:
   - component: {fileID: 600964292}
   - component: {fileID: 600964293}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (59)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2046,7 +2056,7 @@ GameObject:
   m_Component:
   - component: {fileID: 667384932}
   - component: {fileID: 667384933}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2103,7 +2113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 707887802}
   - component: {fileID: 707887803}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2160,7 +2170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 736154138}
   - component: {fileID: 736154139}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2217,7 +2227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 744233104}
   - component: {fileID: 744233105}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2274,7 +2284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 800281136}
   - component: {fileID: 800281137}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2337,7 +2347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 810846823}
   - component: {fileID: 810846824}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2394,7 +2404,7 @@ GameObject:
   m_Component:
   - component: {fileID: 839208195}
   - component: {fileID: 839208196}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2451,7 +2461,7 @@ GameObject:
   m_Component:
   - component: {fileID: 848738963}
   - component: {fileID: 848738964}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (47)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2577,7 +2587,7 @@ GameObject:
   m_Component:
   - component: {fileID: 880499336}
   - component: {fileID: 880499337}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (54)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2707,7 +2717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 906259776}
   - component: {fileID: 906259777}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (69)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2764,7 +2774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 921453907}
   - component: {fileID: 921453908}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2827,7 +2837,7 @@ GameObject:
   m_Component:
   - component: {fileID: 977123707}
   - component: {fileID: 977123708}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (52)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2897,7 +2907,7 @@ GameObject:
   m_Component:
   - component: {fileID: 987628271}
   - component: {fileID: 987628272}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (66)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2967,7 +2977,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1046279913}
   - component: {fileID: 1046279914}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3139,7 +3149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1129407885}
   - component: {fileID: 1129407886}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3196,7 +3206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1192906955}
   - component: {fileID: 1192906956}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3253,7 +3263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1228782091}
   - component: {fileID: 1228782092}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3310,7 +3320,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1244551078}
   - component: {fileID: 1244551079}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3367,7 +3377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1245183885}
   - component: {fileID: 1245183886}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3424,7 +3434,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1271504031}
   - component: {fileID: 1271504032}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3481,7 +3491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1281496508}
   - component: {fileID: 1281496509}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3578,7 +3588,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1292669967}
   - component: {fileID: 1292669968}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (53)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3643,7 +3653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1359425437}
   - component: {fileID: 1359425438}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3700,7 +3710,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1378378183}
   - component: {fileID: 1378378184}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3757,7 +3767,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1383318013}
   - component: {fileID: 1383318014}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3814,7 +3824,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1398410525}
   - component: {fileID: 1398410526}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (64)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3871,7 +3881,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1402926924}
   - component: {fileID: 1402926925}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (62)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3928,7 +3938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1434456407}
   - component: {fileID: 1434456408}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (50)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4075,7 +4085,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1478284481}
   - component: {fileID: 1478284482}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (45)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4132,7 +4142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1529385589}
   - component: {fileID: 1529385590}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (48)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4200,7 +4210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1575249486}
   - component: {fileID: 1575249487}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (70)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4326,7 +4336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1611734352}
   - component: {fileID: 1611734353}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (33.5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4383,7 +4393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1618677991}
   - component: {fileID: 1618677992}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4439,7 +4449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1643283990}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4539,7 +4549,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1665925859}
   - component: {fileID: 1665925860}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (44)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4596,7 +4606,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1720258466}
   - component: {fileID: 1720258467}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (57)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4653,7 +4663,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1729933803}
   - component: {fileID: 1729933804}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4710,7 +4720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1733395867}
   - component: {fileID: 1733395868}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (55)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4837,7 +4847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1747322248}
   - component: {fileID: 1747322249}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (65)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4963,7 +4973,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1813566136}
   - component: {fileID: 1813566137}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5020,7 +5030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1831218290}
   - component: {fileID: 1831218291}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5156,7 +5166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1851516521}
   - component: {fileID: 1851516522}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5213,7 +5223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1880270255}
   - component: {fileID: 1880270256}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5475,7 +5485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1959601498}
   - component: {fileID: 1959601499}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5532,7 +5542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1975362408}
   - component: {fileID: 1975362409}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (51)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5594,7 +5604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1976523727}
   - component: {fileID: 1976523728}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HitBox (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
