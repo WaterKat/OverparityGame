@@ -16,13 +16,14 @@ public class EnemyControllerCrabtopus : MonoBehaviour
     Vector2 position;
     Vector2 right;
     CapsuleCollider2D collision;
+    Animator anim;
    
     //Animator animator;
 
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
-        //animator = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         collision = GetComponent<CapsuleCollider2D>();
 
         time = Time.time;
@@ -56,6 +57,8 @@ public class EnemyControllerCrabtopus : MonoBehaviour
 
     void Shoot()
     {
+        anim.SetTrigger("isAttacking");
+
         Vector2 attack = (Vector2)(player.transform.position - transform.position);
 
         GameObject acidObject = Instantiate(acidPrefab, rigidbody2d.position, Quaternion.identity);

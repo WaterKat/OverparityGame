@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6280249025710222810}
   - component: {fileID: 2455470920791471621}
   - component: {fileID: 2726249658959165799}
+  - component: {fileID: 3062118418209170398}
   m_Layer: 11
   m_Name: Crabtopus Angler
   m_TagString: Untagged
@@ -165,3 +166,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HEALTH: 30
   DamageSound: TardigradeSqueal
+--- !u!95 &3062118418209170398
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5962120950979441871}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e73d0d149d15d754aa35024c05efdeee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
