@@ -119,6 +119,13 @@ public class StandardEnemyCrawl : MonoBehaviour
                     {
                         enemyState = EnemyState.Idle;
                     }
+                    if (desiredDirection.magnitude < 1.5f)
+                    {
+                        if (desiredDirection.x > 0)
+                            anim.SetTrigger("isAttackingRight");
+                        else
+                            anim.SetTrigger("isAttackingLeft");
+                    }
                 }
                 else
                 {

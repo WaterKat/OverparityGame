@@ -11,11 +11,13 @@ public class EnemyDamaged : MonoBehaviour
 
     Rigidbody2D rb;
     bool dead = false;
+    Animator anim;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         health = HEALTH;
+        anim = GetComponent<Animator>();
     }
 
     public void Damage(float despawnTime)
@@ -29,9 +31,12 @@ public class EnemyDamaged : MonoBehaviour
 
             //animator.SetTrigger("Dead");
             rb.gravityScale = 0;
+            anim.SetTrigger("isDying");
             Destroy(rb);
             Destroy(gameObject, despawnTime);
         }
+        else
+            anim.SetTrigger("isDamaged");
     }
 
     public void ChangeHealth(int amount)
