@@ -7,9 +7,9 @@ using UnityEngine;
 
 public class FinalBoss : MonoBehaviour
 {
-    public int MaxX = 150;
-    public int YMove = 30;
-    public int numTriggers = 1;
+    public int MaxX = 100;
+    public int YMove = 80;
+    public int numTriggers = 0;
     float xDistMoved = 0;
     bool aggro1 = true;
 
@@ -27,7 +27,7 @@ public class FinalBoss : MonoBehaviour
 
     public EnemyState enemyState;
 
-    public Vector2 Velocity = new Vector2(3, 1);
+    public Vector2 Velocity = new Vector2(6, 2);
 
     [SerializeField]
     List<Vector2> PatrolPath = new List<Vector2>();

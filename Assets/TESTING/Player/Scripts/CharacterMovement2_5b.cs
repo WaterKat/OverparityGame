@@ -28,7 +28,6 @@ public class CharacterMovement2_5b : MonoBehaviour
     float time2 = 1f;
     Rigidbody2D rigidbody2d;
     Collider2D playerCollider;
-    //Animator animator;
     Vector2 spawnPoint;
     Vector2 lookDirection = new Vector2(1, 0);
 
@@ -46,7 +45,6 @@ public class CharacterMovement2_5b : MonoBehaviour
         spawnPoint = rigidbody2d.position;
 
         WaterKat.Time.TimerManager.AddTimer(0, out footsteptimer);
-        //animator = GetComponent<Animator>();
     }
     string footsteptimer = "";
     void UpdateAnimator()
@@ -113,9 +111,6 @@ public class CharacterMovement2_5b : MonoBehaviour
             lookDirection.Normalize();
         }
 
-        //animator.SetFloat("Look X", lookDirection.x);
-        //animator.SetFloat("Look Y", lookDirection.y);
-
         if (isInvincible)
         {
             invincibleTimer -= Time.deltaTime;
@@ -132,7 +127,7 @@ public class CharacterMovement2_5b : MonoBehaviour
 
             isInvincible = true;
             invincibleTimer = timeInvincible;
-            //animator.SetTrigger("Hit");
+            playerAnimator.SetTrigger("isDamaged");
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
@@ -149,11 +144,12 @@ public class CharacterMovement2_5b : MonoBehaviour
 
     void Shoot()
     {
+        playerAnimator.SetTrigger("isAttacking");
         Vector2 offset;
         if (lookDirection.x < 0)
-            offset = new Vector2(-.6f, .5f);
+            offset = new Vector2(-.6f, 1.3f);
         else
-            offset = new Vector2(.6f, .5f);
+            offset = new Vector2(.6f, 1.3f);
         GameObject bulletObject = Instantiate(bulletPrefab, rigidbody2d.position + offset, Quaternion.identity);
         Bullet bullet = bulletObject.GetComponent<Bullet>();
         if (lookDirection.x > 0)
