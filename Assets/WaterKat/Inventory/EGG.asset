@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a84a84788b7e8f345a853ab8163ee1ee, type: 3}
+  m_Name: EGG
+  m_EditorClassIdentifier: 
+  displayName: Organism
+  displaySprite: {fileID: 21300000, guid: fc4a800050ba50c439ed4732e32d66be, type: 3}
+  itemPrefab: {fileID: 6532535852616463157, guid: 8e550da2f4fcb4b4e8045f29af18dd37,
+    type: 3}
