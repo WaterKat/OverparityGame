@@ -305,6 +305,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6804127198339155886, guid: c13e7c98ff24886458901ff6e65f8192,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1171723890}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c13e7c98ff24886458901ff6e65f8192, type: 3}
 --- !u!1 &281902164
@@ -1626,6 +1631,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6394978, y: 8.640348}
   m_EdgeRadius: 0
+--- !u!1 &1171723890 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8862009774563562522, guid: d05a995694c6d9640bd61e1efd4c66a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 431859534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1277327560
 PrefabInstance:
   m_ObjectHideFlags: 0
