@@ -36,6 +36,11 @@ public class ConvertTXTtoSequence : MonoBehaviour
         {
             Debug.LogError("Colon used in DialogueText!");
         }
+        if (Lines.Length < 2)
+        {
+            Debug.Log(Lines[0]);
+            Debug.Log("WTF");
+        }
         return new string[] { Lines[0], Lines[1].Substring(1) };
     } 
 

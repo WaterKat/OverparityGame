@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13ff70f94a550d641b3b429e5a490f48, type: 3}
-  m_Name: MOIRA
+  m_Name: '{RADIO}'
   m_EditorClassIdentifier: 
-  characterName: Moira
-  color: {r: 0.7833087, g: 0.5549128, b: 0.8113208, a: 1}
+  characterName: '{RADIO}'
+  color: {r: 1, g: 0.81269085, b: 0, a: 1}

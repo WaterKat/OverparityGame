@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7452c34342069f84eb2cc483dffdd6cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PathText: {fileID: 4900000, guid: 3cd91718fe811674e807325e2b555502, type: 3}
+  PathText: {fileID: 4900000, guid: 25c71dfef191fe64689adc1f5a11d985, type: 3}
   RootTextAssetFolder: Assets/TESTING/Dialogue
   characterInfoPath: Assets/TESTING/Dialogue/CharacterObjects
   outputDialogueSequencePath: Assets/TESTING/Dialogue/OutputSequences
@@ -405,8 +405,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5485eff95d35bf140a56516a10bfcaa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Resolution: 12
-  Distance: 5
 --- !u!1 &731703964
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,6 +1026,8 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1389632063}
   defaultMaterial: {fileID: 2100000, guid: d47e21befcd2171488b7558aa62c3a87, type: 2}
   outlineMaterial: {fileID: 2100000, guid: 5b0bc317862dc5642808511fe7d4ce3c, type: 2}
+  desiredMethodName: 
+  inventoryScript: {fileID: 0}
   _active: 0
   dialogueSequence: {fileID: 11400000, guid: 912f0b48da83be644a665a438efea7df, type: 2}
   currentDialogue: 0
