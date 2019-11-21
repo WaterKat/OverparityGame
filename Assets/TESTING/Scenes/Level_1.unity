@@ -253,13 +253,13 @@ GameObject:
   - component: {fileID: 38867006}
   - component: {fileID: 38867008}
   - component: {fileID: 38867007}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: HitBoxes (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &38867006
 Transform:
   m_ObjectHideFlags: 0
@@ -4330,13 +4330,13 @@ GameObject:
   - component: {fileID: 204069586}
   - component: {fileID: 204069588}
   - component: {fileID: 204069587}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: HitBoxes (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &204069586
 Transform:
   m_ObjectHideFlags: 0
@@ -4671,7 +4671,7 @@ GameObject:
   - component: {fileID: 215843847}
   - component: {fileID: 215843849}
   - component: {fileID: 215843848}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: HitBoxes (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6060,7 +6060,7 @@ GameObject:
   - component: {fileID: 640750739}
   - component: {fileID: 640750741}
   - component: {fileID: 640750740}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: HitBoxes (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6166,13 +6166,13 @@ GameObject:
   - component: {fileID: 677559011}
   - component: {fileID: 677559013}
   - component: {fileID: 677559012}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: HitBoxes (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &677559011
 Transform:
   m_ObjectHideFlags: 0
@@ -6537,13 +6537,13 @@ GameObject:
   - component: {fileID: 761243253}
   - component: {fileID: 761243255}
   - component: {fileID: 761243254}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: HitBoxes (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &761243253
 Transform:
   m_ObjectHideFlags: 0
@@ -8625,7 +8625,7 @@ GameObject:
   - component: {fileID: 1685045640}
   - component: {fileID: 1685045642}
   - component: {fileID: 1685045641}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: HitBoxes (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8731,7 +8731,7 @@ GameObject:
   - component: {fileID: 1686673687}
   - component: {fileID: 1686673689}
   - component: {fileID: 1686673688}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: HitBoxes (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9987,7 +9987,7 @@ GameObject:
   - component: {fileID: 1859548824}
   - component: {fileID: 1859548826}
   - component: {fileID: 1859548825}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: HitBoxes (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11270,13 +11270,13 @@ GameObject:
   - component: {fileID: 2124630299}
   - component: {fileID: 2124630301}
   - component: {fileID: 2124630300}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: HitBoxes (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2124630299
 Transform:
   m_ObjectHideFlags: 0
@@ -11397,13 +11397,13 @@ GameObject:
   - component: {fileID: 2135878359}
   - component: {fileID: 2135878361}
   - component: {fileID: 2135878360}
-  m_Layer: 14
+  m_Layer: 15
   m_Name: HitBoxes (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2135878359
 Transform:
   m_ObjectHideFlags: 0

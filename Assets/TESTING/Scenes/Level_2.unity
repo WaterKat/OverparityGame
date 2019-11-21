@@ -1322,6 +1322,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1949322899}
+    - target: {fileID: 944198235, guid: d05a995694c6d9640bd61e1efd4c66a9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05a995694c6d9640bd61e1efd4c66a9, type: 3}
 --- !u!1 &462204231
@@ -2634,17 +2638,17 @@ PrefabInstance:
     - target: {fileID: 3255084963265878041, guid: 9059a788e19b1eb49b3aae8f8215b7b4,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.18867922
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3255084963265878041, guid: 9059a788e19b1eb49b3aae8f8215b7b4,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.15574935
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3255084963265878041, guid: 9059a788e19b1eb49b3aae8f8215b7b4,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.15574935
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9059a788e19b1eb49b3aae8f8215b7b4, type: 3}

@@ -25,7 +25,6 @@ public class Acid : MonoBehaviour
         {
             sonny.ChangeHealth(-1);
         }
-
         Destroy(gameObject, despawnTime);
     }
 
