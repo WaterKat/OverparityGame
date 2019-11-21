@@ -17,6 +17,7 @@ public class CharacterMovement2_5b : MonoBehaviour
     public Sprite SonnyGun;
     public HealthBar healthBar;
     public bool hasGun = false;
+    public bool hasEgg = false;
     
     float HORIZ_SPEED;
     float VERT_SPEED;

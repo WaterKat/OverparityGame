@@ -307,7 +307,7 @@ MonoBehaviour:
   defaultMaterial: {fileID: 2100000, guid: dc5ba5373b9064c4fab858d7e758c141, type: 2}
   outlineMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   desiredMethodName: GiveItemToPlayer
-  inventoryScript: {fileID: 0}
+  inventoryScript: {fileID: 4975826724177635125}
   _active: 0
   dialogueSequence: {fileID: 11400000, guid: 9b29497eda218ae4ba6f78032e9accbe, type: 2}
   currentDialogue: 0
@@ -323,8 +323,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17048ad4f5b39b04f8d0cf91668f5ff4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eggItem: {fileID: 5114672620897931422}
+  giftItem: {fileID: 11400000, guid: e71d20434283efa4aa436aa92c72103e, type: 2}
+  displayItem: {fileID: 5114672620897931422}
   itemonPedestal: 1
+  TargetPlayer: {fileID: 0}
 --- !u!1 &5114672620897931422
 GameObject:
   m_ObjectHideFlags: 0

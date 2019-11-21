@@ -11,12 +11,15 @@ namespace WaterKat.Inventory
         public GameObject displayItem;
         public bool itemonPedestal = true;
 
-        public void GiveItemToPlayer(GameObject gameObject)
+        public GameObject TargetPlayer = null;
+        public void GiveItemToPlayer()
         {
-            InventoryUI inventoryUI = gameObject.GetComponent<InventoryUI>();
+            Debug.Log("Give TIem To PLayer");
+            CharacterMovement2_5b inventoryUI = TargetPlayer.GetComponent<CharacterMovement2_5b>();
             if ((inventoryUI != null) && (itemonPedestal)) 
             {
-                inventoryUI.inventoryItems.Add(giftItem);
+                //   inventoryUI.inventoryItems.Add(giftItem);
+                inventoryUI.hasEgg = true;
                 itemonPedestal = false;
                 displayItem.SetActive(false);
             }

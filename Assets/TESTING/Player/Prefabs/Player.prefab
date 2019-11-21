@@ -407,6 +407,7 @@ MonoBehaviour:
   SonnyGun: {fileID: 21300000, guid: 0bf020f0789ad694b8ac8957d1e2c032, type: 3}
   healthBar: {fileID: 0}
   hasGun: 0
+  hasEgg: 0
   isInvincible: 0
 --- !u!114 &8862009774563562523
 MonoBehaviour:
@@ -462,3 +463,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ae12a4eb183764da9faaee56f83337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterScript: {fileID: 6153978539016955176}
+  GunImage: {fileID: 0}
+  EggImage: {fileID: 0}
+  Ob_1Image: {fileID: 0}
+  Ob_2Image: {fileID: 0}

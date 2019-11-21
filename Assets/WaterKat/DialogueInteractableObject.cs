@@ -17,7 +17,7 @@ namespace WaterKat.Dialogue
         public string desiredMethodName = "";
         public InventoryGiver inventoryScript;
         [SerializeField]
-        public Action<GameObject> desiredAction;
+        public Action desiredAction;
 
         public bool _active = false;
         public bool Selected
@@ -44,8 +44,7 @@ namespace WaterKat.Dialogue
         {
             Selected = false;
 
-            MethodInfo mi = this.GetType().GetMethod(desiredMethodName);
-            Action<GameObject> action = (Action<GameObject>)Delegate.CreateDelegate(typeof(Action<GameObject>), inventoryScript, mi); 
+           
         }
 
         public DialogueSequence dialogueSequence;
@@ -59,14 +58,8 @@ namespace WaterKat.Dialogue
 
         public void CallAction(GameObject player)
         {
-            try
-            {
-                desiredAction(player);
-            }
-            catch
-            {
-
-            }
+                inventoryScript.TargetPlayer = player;
+            inventoryScript.GiveItemToPlayer();
         }
 
         public void TickTowardsNextDialogue()
