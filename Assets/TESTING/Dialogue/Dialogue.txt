@@ -1,5 +1,0 @@
-DEFAULT: This is a test of this dialouge option.
-
-DEFAULT: Dont die
-
-DEFAULT: Try Again.
