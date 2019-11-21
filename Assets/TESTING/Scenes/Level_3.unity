@@ -1175,6 +1175,12 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 9.871016
       objectReference: {fileID: 0}
+    - target: {fileID: 2108089356536049131, guid: adcaaffa7a4ecb8469f3144708f74d81,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3fb6b39627c93aa45b7f4d264b6ff3ef,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adcaaffa7a4ecb8469f3144708f74d81, type: 3}
 --- !u!1 &307455568 stripped
@@ -1222,7 +1228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxX: 100
-  YMove: 80
+  YMove: 65
   numTriggers: 0
   triggered: 0
   enemyState: 0
@@ -1473,6 +1479,12 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 9.871016
       objectReference: {fileID: 0}
+    - target: {fileID: 2108089356536049131, guid: adcaaffa7a4ecb8469f3144708f74d81,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3fb6b39627c93aa45b7f4d264b6ff3ef,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adcaaffa7a4ecb8469f3144708f74d81, type: 3}
 --- !u!1 &340548208 stripped
@@ -1494,7 +1506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxX: 100
-  YMove: 80
+  YMove: 65
   numTriggers: 0
   triggered: 0
   enemyState: 0
