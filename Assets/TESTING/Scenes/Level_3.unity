@@ -454,10 +454,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1698929263, guid: d05a995694c6d9640bd61e1efd4c66a9, type: 3}
-      propertyPath: orthographic size
-      value: 1.7898092
-      objectReference: {fileID: 0}
     - target: {fileID: 3022265798648110152, guid: d05a995694c6d9640bd61e1efd4c66a9,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -473,6 +469,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.6208
       objectReference: {fileID: 0}
+    - target: {fileID: 4009198014608348372, guid: d05a995694c6d9640bd61e1efd4c66a9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1698929264, guid: d05a995694c6d9640bd61e1efd4c66a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.2
@@ -482,11 +483,6 @@ PrefabInstance:
       value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 1698929261, guid: d05a995694c6d9640bd61e1efd4c66a9, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4009198014608348372, guid: d05a995694c6d9640bd61e1efd4c66a9,
-        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -504,6 +500,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 1.9851851
+      objectReference: {fileID: 0}
+    - target: {fileID: 1698929263, guid: d05a995694c6d9640bd61e1efd4c66a9, type: 3}
+      propertyPath: orthographic size
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05a995694c6d9640bd61e1efd4c66a9, type: 3}
