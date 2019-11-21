@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e67c8174838ec54ba34b1a2dad64db6, type: 3}
   m_Name: EggInteraction
   m_EditorClassIdentifier: 
-  Dialogue: []
+  Dialogue:
+  - character: {fileID: 11400000, guid: 84cb4055f45771541a57d38fe19ec79c, type: 2}
+    audio: 
+    dialogue: Mutherfriggin Egg!
+    _duration: 3

@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    public List<InventoryItem> inventoryItems = new List<InventoryItem>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

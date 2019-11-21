@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using System.Reflection;
+using WaterKat.Inventory;
 
 namespace WaterKat.Dialogue
 {
@@ -10,6 +13,11 @@ namespace WaterKat.Dialogue
         public SpriteRenderer spriteRenderer;
         public Material defaultMaterial;
         public Material outlineMaterial;
+
+        public string desiredMethodName = "";
+        public InventoryGiver inventoryScript;
+        [SerializeField]
+        public Action<GameObject> desiredAction;
 
         public bool _active = false;
         public bool Selected
@@ -35,6 +43,9 @@ namespace WaterKat.Dialogue
         private void Start()
         {
             Selected = false;
+
+            MethodInfo mi = this.GetType().GetMethod(desiredMethodName);
+            Action<GameObject> action = (Action<GameObject>)Delegate.CreateDelegate(typeof(Action<GameObject>), inventoryScript, mi); 
         }
 
         public DialogueSequence dialogueSequence;
@@ -44,6 +55,18 @@ namespace WaterKat.Dialogue
         public DialogueInfo currentActiveDialogue
         {
             get { return dialogueSequence.Dialogue[currentDialogue]; }
+        }
+
+        public void CallAction(GameObject player)
+        {
+            try
+            {
+                desiredAction(player);
+            }
+            catch
+            {
+
+            }
         }
 
         public void TickTowardsNextDialogue()
