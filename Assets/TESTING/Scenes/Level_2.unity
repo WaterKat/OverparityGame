@@ -1396,6 +1396,11 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1949322899}
+    - target: {fileID: 6153978539016955176, guid: d05a995694c6d9640bd61e1efd4c66a9,
+        type: 3}
+      propertyPath: hasEgg
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6398869542308561998, guid: d05a995694c6d9640bd61e1efd4c66a9,
         type: 3}
       propertyPath: GunImage
