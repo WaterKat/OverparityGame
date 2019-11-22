@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using WaterKat.Audio;
 
 public class TemporaryBossScript : MonoBehaviour
 {
@@ -99,6 +100,7 @@ public class TemporaryBossScript : MonoBehaviour
         {
             SpawnTentacle(player.transform.position);
         }
+        AudioManager.PlaySound("TentacleSquish");
     }
 
     void SpawnTentacleRowTowardsPlayer()
@@ -113,6 +115,8 @@ public class TemporaryBossScript : MonoBehaviour
                 SpawnTentacle(transform.position+(direction*(i/(float)TentacleRowCount)*TentacleRowLength));
             }
         }
+        AudioManager.PlaySound("TentacleSquish");
+
     }
 
     void SpawnTentacleCircle()
@@ -129,6 +133,8 @@ public class TemporaryBossScript : MonoBehaviour
                 SpawnTentacle(transform.position + (tempPos*3));
             }
         }
+        AudioManager.PlaySound("TentacleSquish");
+
     }
 
     void SpawnSpit()
@@ -137,6 +143,8 @@ public class TemporaryBossScript : MonoBehaviour
         newSpit.SetActive(true);
         newSpit.transform.position = transform.position;
         Destroy(newSpit, spitLifeTime);
+        AudioManager.PlaySound("Spit");
+
     }
 
 
@@ -191,6 +199,7 @@ public class TemporaryBossScript : MonoBehaviour
                     //if (BetweenRestingCooldown.TryTick())
                     {
                         CurrentBossState = BossStates.Resting;
+                        AudioManager.PlaySound("BossResting");
                     }
                 }
                 break;

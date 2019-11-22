@@ -67,7 +67,7 @@ namespace WaterKat.Dialogue
         public void RequestDialogue(DialogueInfo info, Action _action)
         {
             RequestDialogue(info);
-            TimerManager.AddTask(_action, info.duration+0.01f+.25f, out actionTimer);
+            TimerManager.AddTask(_action, info.duration+0.01f+.3f+1f, out actionTimer);
         }
 
         public void RequestDialogue(DialogueInfo info)

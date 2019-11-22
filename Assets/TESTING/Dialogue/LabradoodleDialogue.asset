@@ -57,12 +57,12 @@ MonoBehaviour:
     _duration: 100
     LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 5d5aa064603eea94a902faac7214ff92, type: 2}
-    audio: 
+    audio: Roar
     dialogue: Help! Help!
     _duration: 100
     LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 5d5aa064603eea94a902faac7214ff92, type: 2}
-    audio: 
+    audio: TardigradeSqueal
     dialogue: (MONSTER SOUNDS)
     _duration: 100
     LoadNextDialogue: 1

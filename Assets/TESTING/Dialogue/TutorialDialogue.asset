@@ -33,12 +33,12 @@ MonoBehaviour:
     audio: 
     dialogue: Unfortunately, I did not have the choice to continue life as a average
       human or advance to a cyborg. It was the hand fate dealt me.
-    _duration: 3
+    _duration: 4
     LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 623b08a1b5212454491782fa07643ad4, type: 2}
     audio: 
     dialogue: How so?
-    _duration: 3
+    _duration: 2
     LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 84cb4055f45771541a57d38fe19ec79c, type: 2}
     audio: 
@@ -46,7 +46,7 @@ MonoBehaviour:
       of new species. Near the ocean floor I felt a powerful pull underwater and was
       attacked by something that I'm for damn certain was not from Earth, as it disappeared
       out of thin air.
-    _duration: 3
+    _duration: 6
     LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 623b08a1b5212454491782fa07643ad4, type: 2}
     audio: 
@@ -62,17 +62,17 @@ MonoBehaviour:
     audio: 
     dialogue: Never seen or felt nothing like it doc! But on the greener side the
       new arm is great for kick'n ass and taking names! POW POW!
-    _duration: 3
+    _duration: 6
     LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 623b08a1b5212454491782fa07643ad4, type: 2}
     audio: 
     dialogue: Calm down now rook, we brought you on board to dive, research, and protect.
-    _duration: 3
+    _duration: 6
     LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 84cb4055f45771541a57d38fe19ec79c, type: 2}
     audio: 
     dialogue: Wait, protect?!? I am no damn babysitter!
-    _duration: 3
+    _duration: 4
     LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 623b08a1b5212454491782fa07643ad4, type: 2}
     audio: 
@@ -89,7 +89,7 @@ MonoBehaviour:
     audio: 
     dialogue: Upon the discovery of Specimen C-777 storms have been brewing and not
       only that. Wormholes in the ocean are popping up at random on our grid.
-    _duration: 3
+    _duration: 6
     LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 84cb4055f45771541a57d38fe19ec79c, type: 2}
     audio: 

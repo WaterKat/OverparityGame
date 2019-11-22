@@ -9336,7 +9336,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1442750360
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9397,7 +9397,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1447427036
 GameObject:
@@ -11942,6 +11942,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2489545440182070790, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
+        type: 3}
+      propertyPath: AudioClips.Array.size
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2489545440182070790, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
+        type: 3}
+      propertyPath: StartingAudioName
+      value: BossMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 2489545440182070790, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
+        type: 3}
+      propertyPath: AudioClips.Array.data[15]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6948feda5931a354eaaaba7f00c11b87,
+        type: 2}
+    - target: {fileID: 2489545440182070790, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
+        type: 3}
+      propertyPath: AudioClips.Array.data[16]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2119ab3bb35742b4ea7bf325c3fbd88a,
+        type: 2}
+    - target: {fileID: 2489545440182070790, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
+        type: 3}
+      propertyPath: AudioClips.Array.data[17]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8fad48b042d16be498f4d00418e85126,
+        type: 2}
+    - target: {fileID: 2489545440182070790, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
+        type: 3}
+      propertyPath: AudioClips.Array.data[18]
+      value: 
+      objectReference: {fileID: 11400000, guid: a9f3683d49ae8d54aa65da5543b302af,
+        type: 2}
     - target: {fileID: 4412641067219813377, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -13781,6 +13815,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1484778243697125572, guid: 85ff64b9fa1175445835399aa0f57bda,
+        type: 3}
+      propertyPath: SpawningUnderRate.MaxTick
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1484778243697125574, guid: 85ff64b9fa1175445835399aa0f57bda,
+        type: 3}
+      propertyPath: DamageSound
+      value: Damaged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85ff64b9fa1175445835399aa0f57bda, type: 3}
