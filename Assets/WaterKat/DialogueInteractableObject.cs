@@ -56,9 +56,31 @@ namespace WaterKat.Dialogue
             get { return dialogueSequence.Dialogue[currentDialogue]; }
         }
 
+        public void RequesCurrentDialogue()
+        {
+
+            if (currentActiveDialogue.LoadNextDialogue)
+            {
+                DialogueManager.main.RequestDialogue(currentActiveDialogue,RunNextDialogue);
+            }
+            else
+            {
+                DialogueManager.main.RequestDialogue(currentActiveDialogue);
+                Debug.Log("NotLoadingNext");
+            }
+        }
+
+        public void RunNextDialogue()
+        {
+            Debug.Log("Requesting");
+            TickTowardsNextDialogue();
+            RequesCurrentDialogue();
+        }
+
         public void CallAction(GameObject player)
         {
-                inventoryScript.TargetPlayer = player;
+            if (inventoryScript == null) { return; }
+            inventoryScript.TargetPlayer = player;
             inventoryScript.GiveItemToPlayer();
         }
 

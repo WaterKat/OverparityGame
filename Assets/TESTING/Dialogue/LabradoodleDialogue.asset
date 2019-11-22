@@ -17,72 +17,89 @@ MonoBehaviour:
     audio: 
     dialogue: Wow! This is unlike any lab I have studied in! Your team is on some
       next level shit.
-    _duration: 3
+    _duration: 100
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 623b08a1b5212454491782fa07643ad4, type: 2}
     audio: 
     dialogue: Here in this room is where we hold and study the new forms of biological
       life but none like Specimen C-777.
-    _duration: 3
+    _duration: 100
+    LoadNextDialogue: 0
   - character: {fileID: 11400000, guid: 623b08a1b5212454491782fa07643ad4, type: 2}
     audio: 
     dialogue: Recently, ocean waves and Earth's weather have been unfavorable at times.
-    _duration: 3
+    _duration: 100
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 84cb4055f45771541a57d38fe19ec79c, type: 2}
     audio: 
     dialogue: Did you inform Hyperian Corp back home about this?
-    _duration: 3
+    _duration: 100
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 623b08a1b5212454491782fa07643ad4, type: 2}
     audio: 
     dialogue: No...
-    _duration: 3
+    _duration: 100
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 5d5aa064603eea94a902faac7214ff92, type: 2}
     audio: 
     dialogue: Uhh doc! The waves are really picking up and the sky is turning to an
       odd color
-    _duration: 3
+    _duration: 100
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 5d5aa064603eea94a902faac7214ff92, type: 2}
     audio: 
     dialogue: Wait theres something breaching out of the water...WHA-t the..
-    _duration: 3
+    _duration: 100
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 623b08a1b5212454491782fa07643ad4, type: 2}
     audio: 
     dialogue: What's going on down there!
-    _duration: 3
+    _duration: 100
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 5d5aa064603eea94a902faac7214ff92, type: 2}
     audio: 
     dialogue: Help! Help!
-    _duration: 3
+    _duration: 100
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 5d5aa064603eea94a902faac7214ff92, type: 2}
     audio: 
     dialogue: (MONSTER SOUNDS)
-    _duration: 3
+    _duration: 100
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 623b08a1b5212454491782fa07643ad4, type: 2}
     audio: 
     dialogue: Sonny, stay here! I will be right back
-    _duration: 3
+    _duration: 100
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 84cb4055f45771541a57d38fe19ec79c, type: 2}
     audio: 
     dialogue: Wait! Where the Hell are you going?!
-    _duration: 3
+    _duration: 100
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 623b08a1b5212454491782fa07643ad4, type: 2}
     audio: 
     dialogue: Link up your wristband to Bion's online network, and I will keep in
       contact with you
-    _duration: 3
+    _duration: 100
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 84cb4055f45771541a57d38fe19ec79c, type: 2}
     audio: 
     dialogue: Great, she leaves me here with this thing.
-    _duration: 3
+    _duration: 100
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 84cb4055f45771541a57d38fe19ec79c, type: 2}
     audio: 
     dialogue: Well, in the meantime let me check the status of Specimen-777
-    _duration: 3
+    _duration: 100
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 623b08a1b5212454491782fa07643ad4, type: 2}
     audio: 
     dialogue: SONNY! Do you read me? Over? Take the egg, head to the bottom level
       to docks garage and escape now!
-    _duration: 3
+    _duration: 100
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 623b08a1b5212454491782fa07643ad4, type: 2}
     audio: 
     dialogue: We are being attacked! Get to the sub and keep Specimen-777 safe.
-    _duration: 3
+    _duration: 100
+    LoadNextDialogue: 1

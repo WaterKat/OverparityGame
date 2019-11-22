@@ -17,3 +17,4 @@ MonoBehaviour:
     audio: 
     dialogue: Mutherfriggin Egg!
     _duration: 3
+    LoadNextDialogue: 0

@@ -14,9 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TESTING/Scenes/TutorialScene.unity
     guid: ac078ca1b122e3a43b868dc2b0392685
-  - enabled: 0
-    path: Assets/TESTING/Scenes/MovementTest.unity
-    guid: 3c48824e2bc12aa4dbe1c7e59278d23d
+  - enabled: 1
+    path: Assets/TESTING/Scenes/PreLevelCutscene.unity
+    guid: 0aee3430f37578a4db1e934445dc23f3
   - enabled: 1
     path: Assets/TESTING/Scenes/Level_1.unity
     guid: 4ad715be491eea94b869e9e0982f7dc3

@@ -26,9 +26,12 @@ public class EnemyDamaged : MonoBehaviour
     {
         WaterKat.Audio.AudioManager.PlaySound(DamageSound);
 
-        --health;
-        HEALTH = health;
-
+        if (health > 0)
+        {
+            --health;
+            HEALTH = health;
+            anim.SetTrigger("isDamaged");
+        }
         if (health <= 0)
         {
             dead = true;
@@ -45,9 +48,6 @@ public class EnemyDamaged : MonoBehaviour
                 Destroy(gameObject, despawnTime);
             }
         }
-        else
-            
-            anim.SetTrigger("isDamaged");
     }
 
     public void ChangeHealth(int amount)

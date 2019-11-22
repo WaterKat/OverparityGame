@@ -61,7 +61,7 @@ namespace WaterKat.Dialogue
             {
                 if (!DialogueManager.main.Animating)
                 {
-                    DialogueManager.main.RequestDialogue(CurrentInteractable.currentActiveDialogue);
+                    CurrentInteractable.RequesCurrentDialogue();
                     CurrentInteractable.TickTowardsNextDialogue();
                     CurrentInteractable.CallAction(this.gameObject);
                 }

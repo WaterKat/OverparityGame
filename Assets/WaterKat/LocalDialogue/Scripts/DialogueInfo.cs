@@ -18,6 +18,8 @@ namespace WaterKat.Dialogue
         float _duration;
         public float duration { get { if (_duration != 0) { return _duration; } else { return 3; } } }
 
+        public bool LoadNextDialogue = true;
+
         public DialogueInfo()
         {
             character = null;

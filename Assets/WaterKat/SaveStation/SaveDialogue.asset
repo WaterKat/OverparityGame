@@ -17,3 +17,4 @@ MonoBehaviour:
     audio: 
     dialogue: Man I really needed to take a shit!
     _duration: 3
+    LoadNextDialogue: 0

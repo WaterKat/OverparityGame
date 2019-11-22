@@ -17,24 +17,29 @@ MonoBehaviour:
     audio: 
     dialogue: So Sonny! What's up with the Hyperian Bionic arm rook??
     _duration: 3
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 84cb4055f45771541a57d38fe19ec79c, type: 2}
     audio: 
     dialogue: Ah you know! Being human wasn't enough!!
     _duration: 3
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 623b08a1b5212454491782fa07643ad4, type: 2}
     audio: 
     dialogue: Ha! I'm not surprised. Everyone has Hyperion Corp technology in them
       nowadays.
     _duration: 3
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 84cb4055f45771541a57d38fe19ec79c, type: 2}
     audio: 
     dialogue: Unfortunately, I did not have the choice to continue life as a average
       human or advance to a cyborg. It was the hand fate dealt me.
     _duration: 3
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 623b08a1b5212454491782fa07643ad4, type: 2}
     audio: 
     dialogue: How so?
     _duration: 3
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 84cb4055f45771541a57d38fe19ec79c, type: 2}
     audio: 
     dialogue: On a dive near Lunar Keys a few years back, i was looking into reports
@@ -42,46 +47,57 @@ MonoBehaviour:
       attacked by something that I'm for damn certain was not from Earth, as it disappeared
       out of thin air.
     _duration: 3
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 623b08a1b5212454491782fa07643ad4, type: 2}
     audio: 
     dialogue: 'You mean water? '
     _duration: 3
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 623b08a1b5212454491782fa07643ad4, type: 2}
     audio: 
     dialogue: Disappeared?? Hmmm. Interesting...
     _duration: 3
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 84cb4055f45771541a57d38fe19ec79c, type: 2}
     audio: 
     dialogue: Never seen or felt nothing like it doc! But on the greener side the
       new arm is great for kick'n ass and taking names! POW POW!
     _duration: 3
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 623b08a1b5212454491782fa07643ad4, type: 2}
     audio: 
     dialogue: Calm down now rook, we brought you on board to dive, research, and protect.
     _duration: 3
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 84cb4055f45771541a57d38fe19ec79c, type: 2}
     audio: 
     dialogue: Wait, protect?!? I am no damn babysitter!
     _duration: 3
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 623b08a1b5212454491782fa07643ad4, type: 2}
     audio: 
     dialogue: Sonny, we have recently here at Bion discovered some sort of artifact
       60,501 ft below sea level and thats not even the funky part.
     _duration: 3
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 84cb4055f45771541a57d38fe19ec79c, type: 2}
     audio: 
     dialogue: I'm listening...
     _duration: 3
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 623b08a1b5212454491782fa07643ad4, type: 2}
     audio: 
     dialogue: Upon the discovery of Specimen C-777 storms have been brewing and not
       only that. Wormholes in the ocean are popping up at random on our grid.
     _duration: 3
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 84cb4055f45771541a57d38fe19ec79c, type: 2}
     audio: 
     dialogue: Where is this "artifact" located?
     _duration: 3
+    LoadNextDialogue: 1
   - character: {fileID: 11400000, guid: 623b08a1b5212454491782fa07643ad4, type: 2}
     audio: 
     dialogue: 'The lab! Follow me, watch your step and welcome to Bion. '
     _duration: 3
+    LoadNextDialogue: 0

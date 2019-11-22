@@ -27,7 +27,7 @@ namespace WaterKat.Dialogue
                 {
                     DialogueManager newManager = new GameObject().AddComponent<DialogueManager>();
                     newManager.gameObject.name = "DialogueManager";
-                    DontDestroyOnLoad(newManager.gameObject);
+                   // DontDestroyOnLoad(newManager.gameObject);
                     _main = newManager;
                     return newManager;
                 }
@@ -67,12 +67,12 @@ namespace WaterKat.Dialogue
         public void RequestDialogue(DialogueInfo info, Action _action)
         {
             RequestDialogue(info);
-            TimerManager.AddTask(_action, info.duration+0.01f, out actionTimer);
+            TimerManager.AddTask(_action, info.duration+0.01f+.25f, out actionTimer);
         }
 
         public void RequestDialogue(DialogueInfo info)
         {
-            if (Animating) { return; }
+            if (Animating) { Debug.Log("ALREADYANIMATING");  return; }
 
             dialogueInfo = info;
             DialogueCharacterComponent _dialogueCharacterBubble = FindCharacterComponent(info.character);
@@ -80,10 +80,18 @@ namespace WaterKat.Dialogue
             {
                 _dialogueCharacterBubble.RequestDialogue(info);
             }
+            else
+            {
+                Debug.Log("BubbleDoesn'tExist");
+            }
             DialogueCanvasUI _dialogueCanvas = GameObject.FindObjectOfType<DialogueCanvasUI>();
             if (_dialogueCanvas != null)
             {
                 _dialogueCanvas.RequestDialogue(info);
+            }
+            else
+            {
+                Debug.Log("CanvasDoesn'tExist");
             }
             if (info.audio.Length > 0)
             {
@@ -124,7 +132,7 @@ namespace WaterKat.Dialogue
             return null;
         }
         private void Awake()
-        {
+        {/*
             if (transform.parent == null)
             {
                 DontDestroyOnLoad(this.gameObject);
@@ -132,7 +140,11 @@ namespace WaterKat.Dialogue
             else
             {
                 DontDestroyOnLoad(transform.parent.gameObject);
-            }
-            }
+            }*/
+        }
+        private void OnLevelWasLoaded(int level)
+        {
+            AbortDialogue();   
+        }
     }
 }
