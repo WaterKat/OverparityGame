@@ -30,9 +30,12 @@ public class EnemyDamaged : MonoBehaviour
             dead = true;
 
             //animator.SetTrigger("Dead");
-            rb.gravityScale = 0;
+            if (rb != null)
+            {
+                rb.gravityScale = 0;
+                Destroy(rb);
+            }
             anim.SetTrigger("isDying");
-            Destroy(rb);
             Destroy(gameObject, despawnTime);
         }
         else
