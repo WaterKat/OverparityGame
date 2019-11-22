@@ -8800,7 +8800,7 @@ PrefabInstance:
     - target: {fileID: 9161961674720533716, guid: 516ee7df92d524848be2781b1843457e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9161961674720533716, guid: 516ee7df92d524848be2781b1843457e,
         type: 3}
@@ -9665,6 +9665,10 @@ PrefabInstance:
       propertyPath: m_Pivot.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 496204453, guid: f8e3c6c856b5e5d4c8bb244973288beb, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5681929858847405532, guid: f8e3c6c856b5e5d4c8bb244973288beb,
         type: 3}
       propertyPath: m_FlipX
@@ -9699,10 +9703,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 496204453, guid: f8e3c6c856b5e5d4c8bb244973288beb, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e3c6c856b5e5d4c8bb244973288beb, type: 3}
@@ -11209,5 +11209,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1085343766}
+    - target: {fileID: 2726249658959165799, guid: c13e7c98ff24886458901ff6e65f8192,
+        type: 3}
+      propertyPath: HEALTH
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c13e7c98ff24886458901ff6e65f8192, type: 3}
