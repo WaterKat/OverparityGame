@@ -526,6 +526,16 @@ PrefabInstance:
       propertyPath: hasGun
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6398869542308561998, guid: d05a995694c6d9640bd61e1efd4c66a9,
+        type: 3}
+      propertyPath: GunImage
+      value: 
+      objectReference: {fileID: 1663325349}
+    - target: {fileID: 6398869542308561998, guid: d05a995694c6d9640bd61e1efd4c66a9,
+        type: 3}
+      propertyPath: EggImage
+      value: 
+      objectReference: {fileID: 1888964971}
     - target: {fileID: 8862009774563562523, guid: d05a995694c6d9640bd61e1efd4c66a9,
         type: 3}
       propertyPath: m_Enabled
@@ -655,6 +665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HEALTH: 9000
+  DestroyOnDeath: 1
   DamageSound: TardigradeSqueal
 --- !u!114 &156749688
 MonoBehaviour:
@@ -1552,17 +1563,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 695568532723785871, guid: adcaaffa7a4ecb8469f3144708f74d81,
+        type: 3}
+      propertyPath: m_Mass
+      value: 4.4464197
+      objectReference: {fileID: 0}
     - target: {fileID: 2108089356536049131, guid: adcaaffa7a4ecb8469f3144708f74d81,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 3fb6b39627c93aa45b7f4d264b6ff3ef,
         type: 3}
-    - target: {fileID: 695568532723785871, guid: adcaaffa7a4ecb8469f3144708f74d81,
-        type: 3}
-      propertyPath: m_Mass
-      value: 4.4464197
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1342442522683657658, guid: adcaaffa7a4ecb8469f3144708f74d81, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: adcaaffa7a4ecb8469f3144708f74d81, type: 3}
@@ -1605,6 +1616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HEALTH: 9
+  DestroyOnDeath: 1
   DamageSound: TardigradeSqueal
 --- !u!114 &340548211
 MonoBehaviour:
@@ -2004,16 +2016,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.932698
       objectReference: {fileID: 0}
-    - target: {fileID: 5387832997283254350, guid: 4f1e4bdf930e0b24caa724de79d7c53f,
-        type: 3}
-      propertyPath: blindboss
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1523984153719620634, guid: 4f1e4bdf930e0b24caa724de79d7c53f,
-        type: 3}
-      propertyPath: blindboss
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5387832997283254336, guid: 4f1e4bdf930e0b24caa724de79d7c53f,
         type: 3}
       propertyPath: m_Sprite
@@ -2023,6 +2025,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5387832997283254350, guid: 4f1e4bdf930e0b24caa724de79d7c53f,
+        type: 3}
+      propertyPath: blindboss
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523984153719620634, guid: 4f1e4bdf930e0b24caa724de79d7c53f,
+        type: 3}
+      propertyPath: blindboss
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5387832997283254339, guid: 4f1e4bdf930e0b24caa724de79d7c53f,
         type: 3}
@@ -2066,7 +2078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: MENU
-  Level: Victory
+  Level: BOSS
 --- !u!4 &391701231 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 695241666322451657, guid: cf9ef9800e1901444b07c39db888cbab,
@@ -3117,6 +3129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HEALTH: 9000
+  DestroyOnDeath: 1
   DamageSound: TardigradeSqueal
 --- !u!114 &657996025
 MonoBehaviour:
@@ -5126,106 +5139,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4412641067219813377, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4412641067219813377, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4412641067219813377, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4412641067219813377, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4412641067219813377, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4412641066663624432, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4412641066663624432, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4412641066663624432, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4412641066663624432, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4412641066663624432, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5205343153248090848, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5205343153248090848, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5205343153248090848, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5205343153248090848, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5205343153248090848, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5205343153667964945, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5205343153667964945, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5205343153667964945, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5205343153667964945, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5205343153667964945, guid: b307483a6d7aaf94eb507e5cd0ce2eed,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b307483a6d7aaf94eb507e5cd0ce2eed, type: 3}
 --- !u!1 &1359425436
@@ -5514,12 +5427,12 @@ PrefabInstance:
     - target: {fileID: 7125803327286376440, guid: 4fda1bdc04c264e449a91f44bb2d3094,
         type: 3}
       propertyPath: Velocity.x
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7125803327286376440, guid: 4fda1bdc04c264e449a91f44bb2d3094,
         type: 3}
       propertyPath: Velocity.y
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7125803327286376440, guid: 4fda1bdc04c264e449a91f44bb2d3094,
         type: 3}
@@ -6682,6 +6595,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1663325349 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 499396265, guid: f8e3c6c856b5e5d4c8bb244973288beb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1984463133}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1665925858
 GameObject:
   m_ObjectHideFlags: 0
@@ -7319,6 +7238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HEALTH: 20
+  DestroyOnDeath: 1
   DamageSound: TardigradeSqueal
 --- !u!70 &1754216448
 CapsuleCollider2D:
@@ -7857,6 +7777,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.22695923, y: 10.064297}
   m_EdgeRadius: 0
+--- !u!1 &1888964971 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 205990280, guid: f8e3c6c856b5e5d4c8bb244973288beb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1984463133}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1900252467
 GameObject:
   m_ObjectHideFlags: 0
@@ -7867,7 +7793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1900252469}
   - component: {fileID: 1900252468}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: lvl_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

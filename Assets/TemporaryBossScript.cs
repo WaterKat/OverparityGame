@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TemporaryBossScript : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class TemporaryBossScript : MonoBehaviour
         SpawningDefense = 6,
         Resting = 7,
         AttackTransitionOut = 8,
+        Dead = 9,
     }
 
     [System.Serializable]
@@ -80,6 +82,8 @@ public class TemporaryBossScript : MonoBehaviour
     public float TentacleRowLength = 30;
     public int TentacleRowCount = 20;
 
+    public EnemyDamaged enemyDamagedScript;
+
     void SpawnTentacle(Vector3 position)
     {
         GameObject spawnedTentacle = Instantiate(Tentacle);
@@ -144,19 +148,34 @@ public class TemporaryBossScript : MonoBehaviour
 
     private void Start()
     {
+        enemyDamagedScript = GetComponent<EnemyDamaged>();
         BossAnimator = GetComponent<Animator>();
+    }
+
+    public string TargetScene = "";
+    public void LoadNextScene()
+    {
+        SceneManager.LoadScene(TargetScene);
     }
 
     private void Update()
     {
         BossAnimator.SetInteger("CurrentBossState", (int)CurrentBossState);
 
+        if (enemyDamagedScript.HEALTH == 0)
+        {
+            WaterKat.Time.TimerManager.AddTask(LoadNextScene, 3);
+            this.enabled = false;
+            return;
+        }
+
+
         GameObject player = GameObject.FindGameObjectWithTag("Player");
 
         switch (CurrentBossState)
         {
             case BossStates.Idle:
-                if (Random.Range(0, 100) > 15)
+                if (Random.Range(0, 100) > 20)
                 {
                     if (PlayerWithinRange(player, DesiredRange))
                     {
@@ -178,7 +197,10 @@ public class TemporaryBossScript : MonoBehaviour
             case BossStates.Walking:
                 if (player == null) { Debug.Log("PlayerIsNull"); break; }
 
+                
+
                 transform.position += WalkSpeed * (player.transform.position - transform.position).normalized * Time.deltaTime;
+                BossAnimator.SetFloat("HorizontalSpeed",(WalkSpeed * (player.transform.position - transform.position).normalized).x);
 
                 if (PlayerWithinRange(player, DesiredRange))
                 {
