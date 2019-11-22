@@ -129,6 +129,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 5
+--- !u!114 &323242038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700159878706106438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7008aa17bf231bf44bea8683a9bbc7ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!70 &1791890706
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

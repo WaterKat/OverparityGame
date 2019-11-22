@@ -3522,6 +3522,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!20 &666082751 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1698929263, guid: d05a995694c6d9640bd61e1efd4c66a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1202225297}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &668857859
 GameObject:
   m_ObjectHideFlags: 0
@@ -4358,6 +4364,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5681929858017038509, guid: f8e3c6c856b5e5d4c8bb244973288beb,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 666082751}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e3c6c856b5e5d4c8bb244973288beb, type: 3}
 --- !u!1 &715490368 stripped
@@ -9325,7 +9336,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1442750360
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13478,11 +13489,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
-    - target: {fileID: 3114505957422808811, guid: 85ff64b9fa1175445835399aa0f57bda,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: 2871037823577014933, guid: 85ff64b9fa1175445835399aa0f57bda,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13537,26 +13543,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 524037124739975064, guid: 85ff64b9fa1175445835399aa0f57bda,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1484778243697125572, guid: 85ff64b9fa1175445835399aa0f57bda,
-        type: 3}
-      propertyPath: spitLifeTime
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2807893937318051267, guid: 85ff64b9fa1175445835399aa0f57bda,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 9063225913282879034, guid: 85ff64b9fa1175445835399aa0f57bda,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85ff64b9fa1175445835399aa0f57bda, type: 3}

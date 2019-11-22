@@ -156,7 +156,7 @@ public class TemporaryBossScript : MonoBehaviour
         switch (CurrentBossState)
         {
             case BossStates.Idle:
-                if (Random.Range(0, 100) > 20)
+                if (Random.Range(0, 100) > 15)
                 {
                     if (PlayerWithinRange(player, DesiredRange))
                     {
@@ -169,7 +169,7 @@ public class TemporaryBossScript : MonoBehaviour
                 }
                 else
                 {
-                    if (BetweenRestingCooldown.TryTick())
+                    //if (BetweenRestingCooldown.TryTick())
                     {
                         CurrentBossState = BossStates.Resting;
                     }
