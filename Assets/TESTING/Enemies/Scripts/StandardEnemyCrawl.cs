@@ -67,6 +67,7 @@ public class StandardEnemyCrawl : MonoBehaviour
     {
         enemyRigidbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        PatrolPoint = transform.position;
         //enemyCollider = GetComponent<Collider2D>();
     }
 

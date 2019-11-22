@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7452c34342069f84eb2cc483dffdd6cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PathText: {fileID: 4900000, guid: 25c71dfef191fe64689adc1f5a11d985, type: 3}
+  PathText: {fileID: 4900000, guid: aa690728d3f960c47a9cf647f2270d54, type: 3}
   RootTextAssetFolder: Assets/TESTING/Dialogue
   characterInfoPath: Assets/TESTING/Dialogue/CharacterObjects
   outputDialogueSequencePath: Assets/TESTING/Dialogue/OutputSequences

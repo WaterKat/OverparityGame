@@ -112,6 +112,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &75262178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 75262180}
+  - component: {fileID: 75262179}
+  m_Layer: 0
+  m_Name: PlaceTentacles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &75262179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75262178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a719c75d1c5d8aa4781a1b57aa656c70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tentacle: {fileID: 1844138171044732262}
+  tentaclecount: 40
+  ringsize: 40
+--- !u!4 &75262180
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75262178}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.843525, y: -4.670939, z: -0.46227092}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1716210278
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,12 +359,12 @@ PrefabInstance:
     - target: {fileID: 3633658720169605805, guid: 33c64210528b908488926c86d41c6e7e,
         type: 3}
       propertyPath: m_Name
-      value: BossTentacle
+      value: BossTentacle (0)
       objectReference: {fileID: 0}
     - target: {fileID: 7791779235858927335, guid: 33c64210528b908488926c86d41c6e7e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.41
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7791779235858927335, guid: 33c64210528b908488926c86d41c6e7e,
         type: 3}
@@ -374,7 +420,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 4da1187e355914c47a0f1c03984710fd,
+      objectReference: {fileID: 21300000, guid: 6d830835ea9ecdf4984fcaa1b8cdbe53,
         type: 3}
     - target: {fileID: 2613885418022266837, guid: 33c64210528b908488926c86d41c6e7e,
         type: 3}
@@ -418,3 +464,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &1844138171044732264
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844138171044732262}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3.08

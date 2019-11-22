@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Texture_V_tm
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: e825253d4691b044892af0e64db11951, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5266dd3ed61bd86458b1c7c1f430a13a, type: 3}
   m_Color: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
   m_Transform:
     e00: 1
