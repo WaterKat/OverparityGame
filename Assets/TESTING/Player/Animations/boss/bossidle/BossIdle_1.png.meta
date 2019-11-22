@@ -1,7 +1,8 @@
 fileFormatVersion: 2
-guid: 1af0bdc6cbbd0c44587750e71927e9d9
+guid: 88184269a7f5c6141adf896dd6f2c6ef
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: BossIdle_1
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -69,13 +70,55 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BossIdle_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 28
+        width: 901
+        height: 909
+      alignment: 9
+      pivot: {x: 0.13117808, y: 0.03296455}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59289e24def22f949b934f31643bb295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6c2723adc32f7904591decaf33469eaf
+    spriteID: fef33e4e2b13ccd4bbec07dd30512f01
     vertices: []
     indices: 
     edges: []
