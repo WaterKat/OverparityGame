@@ -31,7 +31,7 @@ namespace WaterKat.CustomEditors
 
             if (PatrolPath != null)
             {
-                CustomLists.Show(PatrolPath);
+    //            CustomLists.Show(PatrolPath);
                 //EditorGUILayout.PropertyField(PatrolPath, true) ;
             }
             else

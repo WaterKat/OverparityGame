@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿/*
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
@@ -85,7 +86,7 @@ public class ConvertTXTtoSequence : MonoBehaviour
                 usableAssets.Add(asset as DialogueCharacterInfo);
             }
         }
-        */
+        
         return characterInfos;
     }
 
@@ -158,5 +159,6 @@ public class ConvertTXTtoSequence : MonoBehaviour
         }
 
     }
-    
+
 }
+*/

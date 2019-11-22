@@ -69,10 +69,10 @@ namespace WaterKat.Audio
 
         private void Start()
         {
-            foreach(AudioInterface audioClip in AudioClips)
+            foreach (AudioInterface audioClip in AudioClips)
             {
                 GameObject gameObject = new GameObject("Audio_" + audioClip.name);
-                gameObject.transform.SetParent(transform);   
+                gameObject.transform.SetParent(transform);
                 audioClip.SetSource(gameObject.AddComponent<AudioSource>());
             }
             if (StartingAudioName == "WK_Music") { Debug.LogAssertion("Hello World! Thank you for choosing the WaterKat AudioManager! Please use the ReadMe to customize your setup!"); }
@@ -154,27 +154,29 @@ namespace WaterKat.Audio
                 return;
             }
         }
+        /*
+                [ContextMenu("UpdateAssets() Warning! This WILL override CURRENT DATA!")]
+                void UpdateAssets()
+                {
+                    AudioClips.Clear();
 
-        [ContextMenu("UpdateAssets() Warning! This WILL override CURRENT DATA!")]
-        void UpdateAssets()
-        {
-            AudioClips.Clear();
+                    string[] guids = AssetDatabase.FindAssets("t:" + typeof(AudioInterface).FullName, new[] { mainAudioPath });
 
-            string[] guids = AssetDatabase.FindAssets("t:" + typeof(AudioInterface).FullName, new[] { mainAudioPath });
+                    List<string> assetPaths = new List<string>();
 
-            List<string> assetPaths = new List<string>();
+                    foreach (string guid in guids)
+                    {
+                        assetPaths.Add(AssetDatabase.GUIDToAssetPath(guid));
+                    }
 
-            foreach (string guid in guids)
-            {
-                assetPaths.Add(AssetDatabase.GUIDToAssetPath(guid));
-            }
+                    foreach (string assetPath in assetPaths)
+                    {
+                        Debug.Log(assetPath);
+                        AudioInterface audioInterface = AssetDatabase.LoadAssetAtPath(assetPath, typeof(AudioInterface)) as AudioInterface;
+                        AudioClips.Add(audioInterface);
+                    }
+                }
 
-            foreach (string assetPath in assetPaths)
-            {
-                Debug.Log(assetPath);
-                AudioInterface audioInterface = AssetDatabase.LoadAssetAtPath(assetPath, typeof(AudioInterface)) as AudioInterface;
-                AudioClips.Add(audioInterface);
-            }
-        }
+            */
     }
 }
