@@ -192,6 +192,8 @@ public class TemporaryBossScript : MonoBehaviour
                     else
                     {
                         CurrentBossState = BossStates.Walking;
+                        AudioManager.PlaySound("BossResting");
+
                     }
                 }
                 else
