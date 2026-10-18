@@ -34,3 +34,27 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# Unity generated folders and files
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+[Uu]ser[Ss]ettings/
+UIElementsSchema/
+*.log
+crashlytics-build.properties
+
+# Unity generated project files for other editors
+.idea/
+.vscode/
+*.pidb
+*.mdb
+*.opendb
+
+# OS-generated files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
